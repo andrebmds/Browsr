@@ -12,7 +12,7 @@
 		F9255E46299E772E00EC4409 /* BrowsrLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9255E3C299E772D00EC4409 /* BrowsrLib.framework */; };
 		F9255E4B299E772E00EC4409 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E4A299E772E00EC4409 /* APIServiceTests.swift */; };
 		F9255E4D299E772E00EC4409 /* BrowsrLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F9255E3F299E772D00EC4409 /* BrowsrLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9255E5D299E8B6600EC4409 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E5C299E8B6600EC4409 /* MockAPIClient.swift */; };
+		F9255E5D299E8B6600EC4409 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E5C299E8B6600EC4409 /* EndpointTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +34,7 @@
 		F9255E45299E772E00EC4409 /* BrowsrLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9255E4A299E772E00EC4409 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		F9255E4C299E772E00EC4409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9255E5C299E8B6600EC4409 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
+		F9255E5C299E8B6600EC4409 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 		F9255E49299E772E00EC4409 /* BrowsrLibTests */ = {
 			isa = PBXGroup;
 			children = (
-				F9255E5C299E8B6600EC4409 /* MockAPIClient.swift */,
+				F9255E5C299E8B6600EC4409 /* EndpointTests.swift */,
 				F9255E4A299E772E00EC4409 /* APIServiceTests.swift */,
 				F9255E4C299E772E00EC4409 /* Info.plist */,
 			);
@@ -222,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9255E4B299E772E00EC4409 /* APIServiceTests.swift in Sources */,
-				F9255E5D299E8B6600EC4409 /* MockAPIClient.swift in Sources */,
+				F9255E5D299E8B6600EC4409 /* EndpointTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
