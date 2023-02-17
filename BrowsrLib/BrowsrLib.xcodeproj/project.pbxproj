@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F91D4A96299FB2C7006170E5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D4A95299FB2C7006170E5 /* APIService.swift */; };
+		F91D4A9B299FB3F1006170E5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D4A9A299FB3F1006170E5 /* Endpoint.swift */; };
 		F9255E46299E772E00EC4409 /* BrowsrLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9255E3C299E772D00EC4409 /* BrowsrLib.framework */; };
-		F9255E4B299E772E00EC4409 /* BrowsrLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E4A299E772E00EC4409 /* BrowsrLibTests.swift */; };
+		F9255E4B299E772E00EC4409 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E4A299E772E00EC4409 /* APIServiceTests.swift */; };
 		F9255E4D299E772E00EC4409 /* BrowsrLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F9255E3F299E772D00EC4409 /* BrowsrLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9255E5D299E8B6600EC4409 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E5C299E8B6600EC4409 /* MockAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +26,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F91D4A95299FB2C7006170E5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		F91D4A9A299FB3F1006170E5 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F9255E3C299E772D00EC4409 /* BrowsrLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BrowsrLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9255E3F299E772D00EC4409 /* BrowsrLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowsrLib.h; sourceTree = "<group>"; };
 		F9255E40299E772D00EC4409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9255E45299E772E00EC4409 /* BrowsrLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9255E4A299E772E00EC4409 /* BrowsrLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrLibTests.swift; sourceTree = "<group>"; };
+		F9255E4A299E772E00EC4409 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		F9255E4C299E772E00EC4409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9255E5C299E8B6600EC4409 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F91D4A99299FB312006170E5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F91D4A95299FB2C7006170E5 /* APIService.swift */,
+				F91D4A9A299FB3F1006170E5 /* Endpoint.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		F9255E32299E772D00EC4409 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +86,7 @@
 		F9255E3E299E772D00EC4409 /* BrowsrLib */ = {
 			isa = PBXGroup;
 			children = (
+				F91D4A99299FB312006170E5 /* Helper */,
 				F9255E3F299E772D00EC4409 /* BrowsrLib.h */,
 				F9255E40299E772D00EC4409 /* Info.plist */,
 			);
@@ -80,7 +96,8 @@
 		F9255E49299E772E00EC4409 /* BrowsrLibTests */ = {
 			isa = PBXGroup;
 			children = (
-				F9255E4A299E772E00EC4409 /* BrowsrLibTests.swift */,
+				F9255E5C299E8B6600EC4409 /* MockAPIClient.swift */,
+				F9255E4A299E772E00EC4409 /* APIServiceTests.swift */,
 				F9255E4C299E772E00EC4409 /* Info.plist */,
 			);
 			path = BrowsrLibTests;
@@ -147,6 +164,7 @@
 				TargetAttributes = {
 					F9255E3B299E772D00EC4409 = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 					F9255E44299E772E00EC4409 = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -194,6 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91D4A9B299FB3F1006170E5 /* Endpoint.swift in Sources */,
+				F91D4A96299FB2C7006170E5 /* APIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +221,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9255E4B299E772E00EC4409 /* BrowsrLibTests.swift in Sources */,
+				F9255E4B299E772E00EC4409 /* APIServiceTests.swift in Sources */,
+				F9255E5D299E8B6600EC4409 /* MockAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +362,7 @@
 		F9255E51299E772E00EC4409 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
@@ -357,14 +379,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F9255E52299E772E00EC4409 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
@@ -381,14 +406,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		F9255E54299E772E00EC4409 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
 				INFOPLIST_FILE = BrowsrLibTests/Info.plist;
@@ -407,6 +434,7 @@
 		F9255E55299E772E00EC4409 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
 				INFOPLIST_FILE = BrowsrLibTests/Info.plist;
