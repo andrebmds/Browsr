@@ -17,7 +17,8 @@ protocol Endpoint {
 extension Endpoint {
     func request() -> URLRequest {
         // Construct the URL for the endpoint
-        let urlString = "https://api.github.com/organizations" + path
+        let baseURL = "https://api.github.com"
+        let urlString = baseURL + path
         let url = URL(string: urlString)!
         
         // Create the URL request with the appropriate method and headers
@@ -50,4 +51,37 @@ enum HTTPMethod: String {
     case post = "POST"
     case put = "PUT"
     case delete = "DELETE"
+}
+
+enum GitHubEndpoint {
+    case listOrganizations
+    case searchOrganizations(query: String)
+}
+
+extension GitHubEndpoint: Endpoint {
+    var path: String {
+        switch self {
+        case .listOrganizations:
+            return "/organizations"
+        case .searchOrganizations:
+            return "/search/orgs"
+        }
+    }
+    
+    var method: HTTPMethod {
+        return .get
+    }
+    
+    var parameters: [String: Any]? {
+        switch self {
+        case .listOrganizations:
+            return nil
+        case .searchOrganizations(let query):
+            return ["q": query]
+        }
+    }
+    
+    var headers: [String: String]? {
+        return nil
+    }
 }

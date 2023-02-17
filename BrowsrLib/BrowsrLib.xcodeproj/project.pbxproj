@@ -13,6 +13,9 @@
 		F9255E4B299E772E00EC4409 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E4A299E772E00EC4409 /* APIServiceTests.swift */; };
 		F9255E4D299E772E00EC4409 /* BrowsrLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F9255E3F299E772D00EC4409 /* BrowsrLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9255E5D299E8B6600EC4409 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E5C299E8B6600EC4409 /* EndpointTests.swift */; };
+		F9DF4AF6299FC72400F1A447 /* APIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4AF5299FC72400F1A447 /* APIServiceMock.swift */; };
+		F9DF4AFC299FCBB400F1A447 /* APIServiceGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4AFB299FCBB400F1A447 /* APIServiceGitHubTests.swift */; };
+		F9DF4B02299FCDC500F1A447 /* Organizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4B01299FCDC500F1A447 /* Organizations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 		F9255E4A299E772E00EC4409 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		F9255E4C299E772E00EC4409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9255E5C299E8B6600EC4409 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		F9DF4AF5299FC72400F1A447 /* APIServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceMock.swift; sourceTree = "<group>"; };
+		F9DF4AFB299FCBB400F1A447 /* APIServiceGitHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceGitHubTests.swift; sourceTree = "<group>"; };
+		F9DF4B01299FCDC500F1A447 /* Organizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organizations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,8 @@
 			children = (
 				F91D4A95299FB2C7006170E5 /* APIService.swift */,
 				F91D4A9A299FB3F1006170E5 /* Endpoint.swift */,
+				F9DF4AF5299FC72400F1A447 /* APIServiceMock.swift */,
+				F9DF4B01299FCDC500F1A447 /* Organizations.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 			children = (
 				F9255E5C299E8B6600EC4409 /* EndpointTests.swift */,
 				F9255E4A299E772E00EC4409 /* APIServiceTests.swift */,
+				F9DF4AFB299FCBB400F1A447 /* APIServiceGitHubTests.swift */,
 				F9255E4C299E772E00EC4409 /* Info.plist */,
 			);
 			path = BrowsrLibTests;
@@ -214,6 +223,8 @@
 			files = (
 				F91D4A9B299FB3F1006170E5 /* Endpoint.swift in Sources */,
 				F91D4A96299FB2C7006170E5 /* APIService.swift in Sources */,
+				F9DF4B02299FCDC500F1A447 /* Organizations.swift in Sources */,
+				F9DF4AF6299FC72400F1A447 /* APIServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +234,7 @@
 			files = (
 				F9255E4B299E772E00EC4409 /* APIServiceTests.swift in Sources */,
 				F9255E5D299E8B6600EC4409 /* EndpointTests.swift in Sources */,
+				F9DF4AFC299FCBB400F1A447 /* APIServiceGitHubTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
