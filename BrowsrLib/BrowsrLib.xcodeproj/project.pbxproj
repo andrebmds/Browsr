@@ -7,219 +7,124 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F90EF0AE29A0E39F00271922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0AD29A0E39F00271922 /* AppDelegate.swift */; };
-		F90EF0B029A0E39F00271922 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0AF29A0E39F00271922 /* SceneDelegate.swift */; };
-		F90EF0B229A0E39F00271922 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0B129A0E39F00271922 /* ViewController.swift */; };
-		F90EF0B529A0E39F00271922 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90EF0B329A0E39F00271922 /* Main.storyboard */; };
-		F90EF0B829A0E39F00271922 /* BrowsrApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0B629A0E39F00271922 /* BrowsrApp.xcdatamodeld */; };
-		F90EF0BA29A0E3AC00271922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F90EF0B929A0E3AC00271922 /* Assets.xcassets */; };
-		F90EF0BD29A0E3AC00271922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90EF0BB29A0E3AC00271922 /* LaunchScreen.storyboard */; };
-		F90EF0C829A0E3AD00271922 /* BrowsrAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0C729A0E3AD00271922 /* BrowsrAppTests.swift */; };
-		F90EF0D329A0E3AD00271922 /* BrowsrAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0D229A0E3AD00271922 /* BrowsrAppUITests.swift */; };
-		F91D4A96299FB2C7006170E5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D4A95299FB2C7006170E5 /* APIService.swift */; };
-		F91D4A9B299FB3F1006170E5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D4A9A299FB3F1006170E5 /* Endpoint.swift */; };
-		F9255E46299E772E00EC4409 /* BrowsrLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9255E3C299E772D00EC4409 /* BrowsrLib.framework */; };
-		F9255E4B299E772E00EC4409 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E4A299E772E00EC4409 /* APIServiceTests.swift */; };
-		F9255E4D299E772E00EC4409 /* BrowsrLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F9255E3F299E772D00EC4409 /* BrowsrLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9255E5D299E8B6600EC4409 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E5C299E8B6600EC4409 /* EndpointTests.swift */; };
-		F9DF4AF6299FC72400F1A447 /* APIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4AF5299FC72400F1A447 /* APIServiceMock.swift */; };
-		F9DF4AFC299FCBB400F1A447 /* APIServiceGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4AFB299FCBB400F1A447 /* APIServiceGitHubTests.swift */; };
-		F9DF4B02299FCDC500F1A447 /* Organizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4B01299FCDC500F1A447 /* Organizations.swift */; };
-		F9DF4B21299FE60100F1A447 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4B20299FE60100F1A447 /* GithubAPI.swift */; };
-		F9DF4B26299FE8C600F1A447 /* MockGithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4B25299FE8C600F1A447 /* MockGithubAPI.swift */; };
+		F9E28CD529A0F9D3007E7474 /* BrowsrLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E28CCB29A0F9D2007E7474 /* BrowsrLib.framework */; };
+		F9E28CDA29A0F9D3007E7474 /* BrowsrLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CD929A0F9D3007E7474 /* BrowsrLibTests.swift */; };
+		F9E28CDC29A0F9D3007E7474 /* BrowsrLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E28CCE29A0F9D2007E7474 /* BrowsrLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9E28CF029A0FA48007E7474 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CEB29A0FA48007E7474 /* APIService.swift */; };
+		F9E28CF129A0FA48007E7474 /* APIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CEC29A0FA48007E7474 /* APIServiceMock.swift */; };
+		F9E28CF229A0FA48007E7474 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CED29A0FA48007E7474 /* GithubAPI.swift */; };
+		F9E28CF329A0FA48007E7474 /* Organizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CEE29A0FA48007E7474 /* Organizations.swift */; };
+		F9E28CF429A0FA48007E7474 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CEF29A0FA48007E7474 /* Endpoint.swift */; };
+		F9E28CFC29A0FA76007E7474 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CF929A0FA76007E7474 /* EndpointTests.swift */; };
+		F9E28CFD29A0FA76007E7474 /* APIServiceGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CFA29A0FA76007E7474 /* APIServiceGitHubTests.swift */; };
+		F9E28CFE29A0FA76007E7474 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CFB29A0FA76007E7474 /* APIServiceTests.swift */; };
+		F9E28D0529A0FC63007E7474 /* MockGithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D0429A0FC62007E7474 /* MockGithubAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F90EF0C429A0E3AD00271922 /* PBXContainerItemProxy */ = {
+		F9E28CD629A0F9D3007E7474 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F9255E33299E772D00EC4409 /* Project object */;
+			containerPortal = F9E28CC229A0F9D2007E7474 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F90EF0AA29A0E39F00271922;
-			remoteInfo = BrowsrApp;
-		};
-		F90EF0CF29A0E3AD00271922 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F9255E33299E772D00EC4409 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F90EF0AA29A0E39F00271922;
-			remoteInfo = BrowsrApp;
-		};
-		F9255E47299E772E00EC4409 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F9255E33299E772D00EC4409 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F9255E3B299E772D00EC4409;
+			remoteGlobalIDString = F9E28CCA29A0F9D2007E7474;
 			remoteInfo = BrowsrLib;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F90EF0AB29A0E39F00271922 /* BrowsrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowsrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F90EF0AD29A0E39F00271922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F90EF0AF29A0E39F00271922 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F90EF0B129A0E39F00271922 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F90EF0B429A0E39F00271922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F90EF0B729A0E39F00271922 /* BrowsrApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrowsrApp.xcdatamodel; sourceTree = "<group>"; };
-		F90EF0B929A0E3AC00271922 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F90EF0BC29A0E3AC00271922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F90EF0BE29A0E3AC00271922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F90EF0C329A0E3AD00271922 /* BrowsrAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F90EF0C729A0E3AD00271922 /* BrowsrAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrAppTests.swift; sourceTree = "<group>"; };
-		F90EF0C929A0E3AD00271922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F90EF0CE29A0E3AD00271922 /* BrowsrAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F90EF0D229A0E3AD00271922 /* BrowsrAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrAppUITests.swift; sourceTree = "<group>"; };
-		F90EF0D429A0E3AD00271922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F91D4A95299FB2C7006170E5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		F91D4A9A299FB3F1006170E5 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		F9255E3C299E772D00EC4409 /* BrowsrLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BrowsrLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9255E3F299E772D00EC4409 /* BrowsrLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowsrLib.h; sourceTree = "<group>"; };
-		F9255E40299E772D00EC4409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9255E45299E772E00EC4409 /* BrowsrLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9255E4A299E772E00EC4409 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
-		F9255E4C299E772E00EC4409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9255E5C299E8B6600EC4409 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
-		F9DF4AF5299FC72400F1A447 /* APIServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceMock.swift; sourceTree = "<group>"; };
-		F9DF4AFB299FCBB400F1A447 /* APIServiceGitHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceGitHubTests.swift; sourceTree = "<group>"; };
-		F9DF4B01299FCDC500F1A447 /* Organizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organizations.swift; sourceTree = "<group>"; };
-		F9DF4B20299FE60100F1A447 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
-		F9DF4B25299FE8C600F1A447 /* MockGithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGithubAPI.swift; sourceTree = "<group>"; };
+		F9E28CCB29A0F9D2007E7474 /* BrowsrLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BrowsrLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E28CCE29A0F9D2007E7474 /* BrowsrLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowsrLib.h; sourceTree = "<group>"; };
+		F9E28CCF29A0F9D2007E7474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E28CD429A0F9D3007E7474 /* BrowsrLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E28CD929A0F9D3007E7474 /* BrowsrLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrLibTests.swift; sourceTree = "<group>"; };
+		F9E28CDB29A0F9D3007E7474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E28CEB29A0FA48007E7474 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		F9E28CEC29A0FA48007E7474 /* APIServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceMock.swift; sourceTree = "<group>"; };
+		F9E28CED29A0FA48007E7474 /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		F9E28CEE29A0FA48007E7474 /* Organizations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organizations.swift; sourceTree = "<group>"; };
+		F9E28CEF29A0FA48007E7474 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		F9E28CF929A0FA76007E7474 /* EndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		F9E28CFA29A0FA76007E7474 /* APIServiceGitHubTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceGitHubTests.swift; sourceTree = "<group>"; };
+		F9E28CFB29A0FA76007E7474 /* APIServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
+		F9E28D0429A0FC62007E7474 /* MockGithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockGithubAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F90EF0A829A0E39F00271922 /* Frameworks */ = {
+		F9E28CC829A0F9D2007E7474 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F90EF0C029A0E3AD00271922 /* Frameworks */ = {
+		F9E28CD129A0F9D3007E7474 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F90EF0CB29A0E3AD00271922 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9255E39299E772D00EC4409 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9255E42299E772E00EC4409 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F9255E46299E772E00EC4409 /* BrowsrLib.framework in Frameworks */,
+				F9E28CD529A0F9D3007E7474 /* BrowsrLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F90EF0AC29A0E39F00271922 /* BrowsrApp */ = {
+		F9E28CC129A0F9D2007E7474 = {
 			isa = PBXGroup;
 			children = (
-				F90EF0AD29A0E39F00271922 /* AppDelegate.swift */,
-				F90EF0AF29A0E39F00271922 /* SceneDelegate.swift */,
-				F90EF0B129A0E39F00271922 /* ViewController.swift */,
-				F90EF0B329A0E39F00271922 /* Main.storyboard */,
-				F90EF0B929A0E3AC00271922 /* Assets.xcassets */,
-				F90EF0BB29A0E3AC00271922 /* LaunchScreen.storyboard */,
-				F90EF0BE29A0E3AC00271922 /* Info.plist */,
-				F90EF0B629A0E39F00271922 /* BrowsrApp.xcdatamodeld */,
-			);
-			path = BrowsrApp;
-			sourceTree = "<group>";
-		};
-		F90EF0C629A0E3AD00271922 /* BrowsrAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				F90EF0C729A0E3AD00271922 /* BrowsrAppTests.swift */,
-				F90EF0C929A0E3AD00271922 /* Info.plist */,
-			);
-			path = BrowsrAppTests;
-			sourceTree = "<group>";
-		};
-		F90EF0D129A0E3AD00271922 /* BrowsrAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F90EF0D229A0E3AD00271922 /* BrowsrAppUITests.swift */,
-				F90EF0D429A0E3AD00271922 /* Info.plist */,
-			);
-			path = BrowsrAppUITests;
-			sourceTree = "<group>";
-		};
-		F91D4A99299FB312006170E5 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				F91D4A95299FB2C7006170E5 /* APIService.swift */,
-				F91D4A9A299FB3F1006170E5 /* Endpoint.swift */,
-				F9DF4AF5299FC72400F1A447 /* APIServiceMock.swift */,
-				F9DF4B01299FCDC500F1A447 /* Organizations.swift */,
-				F9DF4B20299FE60100F1A447 /* GithubAPI.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		F9255E32299E772D00EC4409 = {
-			isa = PBXGroup;
-			children = (
-				F9255E3E299E772D00EC4409 /* BrowsrLib */,
-				F9255E49299E772E00EC4409 /* BrowsrLibTests */,
-				F90EF0AC29A0E39F00271922 /* BrowsrApp */,
-				F90EF0C629A0E3AD00271922 /* BrowsrAppTests */,
-				F90EF0D129A0E3AD00271922 /* BrowsrAppUITests */,
-				F9255E3D299E772D00EC4409 /* Products */,
+				F9E28CCD29A0F9D2007E7474 /* BrowsrLib */,
+				F9E28CD829A0F9D3007E7474 /* BrowsrLibTests */,
+				F9E28CCC29A0F9D2007E7474 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F9255E3D299E772D00EC4409 /* Products */ = {
+		F9E28CCC29A0F9D2007E7474 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F9255E3C299E772D00EC4409 /* BrowsrLib.framework */,
-				F9255E45299E772E00EC4409 /* BrowsrLibTests.xctest */,
-				F90EF0AB29A0E39F00271922 /* BrowsrApp.app */,
-				F90EF0C329A0E3AD00271922 /* BrowsrAppTests.xctest */,
-				F90EF0CE29A0E3AD00271922 /* BrowsrAppUITests.xctest */,
+				F9E28CCB29A0F9D2007E7474 /* BrowsrLib.framework */,
+				F9E28CD429A0F9D3007E7474 /* BrowsrLibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F9255E3E299E772D00EC4409 /* BrowsrLib */ = {
+		F9E28CCD29A0F9D2007E7474 /* BrowsrLib */ = {
 			isa = PBXGroup;
 			children = (
-				F91D4A99299FB312006170E5 /* Helper */,
-				F9255E3F299E772D00EC4409 /* BrowsrLib.h */,
-				F9255E40299E772D00EC4409 /* Info.plist */,
+				F9E28CEA29A0FA48007E7474 /* Helper */,
+				F9E28CCE29A0F9D2007E7474 /* BrowsrLib.h */,
+				F9E28CCF29A0F9D2007E7474 /* Info.plist */,
 			);
 			path = BrowsrLib;
 			sourceTree = "<group>";
 		};
-		F9255E49299E772E00EC4409 /* BrowsrLibTests */ = {
+		F9E28CD829A0F9D3007E7474 /* BrowsrLibTests */ = {
 			isa = PBXGroup;
 			children = (
-				F9DF4B2B299FE96400F1A447 /* Mock */,
-				F9255E5C299E8B6600EC4409 /* EndpointTests.swift */,
-				F9255E4A299E772E00EC4409 /* APIServiceTests.swift */,
-				F9DF4AFB299FCBB400F1A447 /* APIServiceGitHubTests.swift */,
-				F9255E4C299E772E00EC4409 /* Info.plist */,
+				F9E28D0329A0FC62007E7474 /* Mock */,
+				F9E28CFA29A0FA76007E7474 /* APIServiceGitHubTests.swift */,
+				F9E28CFB29A0FA76007E7474 /* APIServiceTests.swift */,
+				F9E28CF929A0FA76007E7474 /* EndpointTests.swift */,
+				F9E28CD929A0F9D3007E7474 /* BrowsrLibTests.swift */,
+				F9E28CDB29A0F9D3007E7474 /* Info.plist */,
 			);
 			path = BrowsrLibTests;
 			sourceTree = "<group>";
 		};
-		F9DF4B2B299FE96400F1A447 /* Mock */ = {
+		F9E28CEA29A0FA48007E7474 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				F9DF4B25299FE8C600F1A447 /* MockGithubAPI.swift */,
+				F9E28CEB29A0FA48007E7474 /* APIService.swift */,
+				F9E28CEC29A0FA48007E7474 /* APIServiceMock.swift */,
+				F9E28CED29A0FA48007E7474 /* GithubAPI.swift */,
+				F9E28CEE29A0FA48007E7474 /* Organizations.swift */,
+				F9E28CEF29A0FA48007E7474 /* Endpoint.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F9E28D0329A0FC62007E7474 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				F9E28D0429A0FC62007E7474 /* MockGithubAPI.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -227,78 +132,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F9255E37299E772D00EC4409 /* Headers */ = {
+		F9E28CC629A0F9D2007E7474 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9255E4D299E772E00EC4409 /* BrowsrLib.h in Headers */,
+				F9E28CDC29A0F9D3007E7474 /* BrowsrLib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F90EF0AA29A0E39F00271922 /* BrowsrApp */ = {
+		F9E28CCA29A0F9D2007E7474 /* BrowsrLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F90EF0DB29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrApp" */;
+			buildConfigurationList = F9E28CDF29A0F9D3007E7474 /* Build configuration list for PBXNativeTarget "BrowsrLib" */;
 			buildPhases = (
-				F90EF0A729A0E39F00271922 /* Sources */,
-				F90EF0A829A0E39F00271922 /* Frameworks */,
-				F90EF0A929A0E39F00271922 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BrowsrApp;
-			productName = BrowsrApp;
-			productReference = F90EF0AB29A0E39F00271922 /* BrowsrApp.app */;
-			productType = "com.apple.product-type.application";
-		};
-		F90EF0C229A0E3AD00271922 /* BrowsrAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F90EF0DC29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrAppTests" */;
-			buildPhases = (
-				F90EF0BF29A0E3AD00271922 /* Sources */,
-				F90EF0C029A0E3AD00271922 /* Frameworks */,
-				F90EF0C129A0E3AD00271922 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F90EF0C529A0E3AD00271922 /* PBXTargetDependency */,
-			);
-			name = BrowsrAppTests;
-			productName = BrowsrAppTests;
-			productReference = F90EF0C329A0E3AD00271922 /* BrowsrAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F90EF0CD29A0E3AD00271922 /* BrowsrAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F90EF0DD29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrAppUITests" */;
-			buildPhases = (
-				F90EF0CA29A0E3AD00271922 /* Sources */,
-				F90EF0CB29A0E3AD00271922 /* Frameworks */,
-				F90EF0CC29A0E3AD00271922 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F90EF0D029A0E3AD00271922 /* PBXTargetDependency */,
-			);
-			name = BrowsrAppUITests;
-			productName = BrowsrAppUITests;
-			productReference = F90EF0CE29A0E3AD00271922 /* BrowsrAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		F9255E3B299E772D00EC4409 /* BrowsrLib */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F9255E50299E772E00EC4409 /* Build configuration list for PBXNativeTarget "BrowsrLib" */;
-			buildPhases = (
-				F9255E37299E772D00EC4409 /* Headers */,
-				F9255E38299E772D00EC4409 /* Sources */,
-				F9255E39299E772D00EC4409 /* Frameworks */,
-				F9255E3A299E772D00EC4409 /* Resources */,
+				F9E28CC629A0F9D2007E7474 /* Headers */,
+				F9E28CC729A0F9D2007E7474 /* Sources */,
+				F9E28CC829A0F9D2007E7474 /* Frameworks */,
+				F9E28CC929A0F9D2007E7474 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -306,57 +158,45 @@
 			);
 			name = BrowsrLib;
 			productName = BrowsrLib;
-			productReference = F9255E3C299E772D00EC4409 /* BrowsrLib.framework */;
+			productReference = F9E28CCB29A0F9D2007E7474 /* BrowsrLib.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F9255E44299E772E00EC4409 /* BrowsrLibTests */ = {
+		F9E28CD329A0F9D3007E7474 /* BrowsrLibTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9255E53299E772E00EC4409 /* Build configuration list for PBXNativeTarget "BrowsrLibTests" */;
+			buildConfigurationList = F9E28CE229A0F9D3007E7474 /* Build configuration list for PBXNativeTarget "BrowsrLibTests" */;
 			buildPhases = (
-				F9255E41299E772E00EC4409 /* Sources */,
-				F9255E42299E772E00EC4409 /* Frameworks */,
-				F9255E43299E772E00EC4409 /* Resources */,
+				F9E28CD029A0F9D3007E7474 /* Sources */,
+				F9E28CD129A0F9D3007E7474 /* Frameworks */,
+				F9E28CD229A0F9D3007E7474 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F9255E48299E772E00EC4409 /* PBXTargetDependency */,
+				F9E28CD729A0F9D3007E7474 /* PBXTargetDependency */,
 			);
 			name = BrowsrLibTests;
 			productName = BrowsrLibTests;
-			productReference = F9255E45299E772E00EC4409 /* BrowsrLibTests.xctest */;
+			productReference = F9E28CD429A0F9D3007E7474 /* BrowsrLibTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F9255E33299E772D00EC4409 /* Project object */ = {
+		F9E28CC229A0F9D2007E7474 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					F90EF0AA29A0E39F00271922 = {
+					F9E28CCA29A0F9D2007E7474 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
-					F90EF0C229A0E3AD00271922 = {
-						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = F90EF0AA29A0E39F00271922;
-					};
-					F90EF0CD29A0E3AD00271922 = {
-						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = F90EF0AA29A0E39F00271922;
-					};
-					F9255E3B299E772D00EC4409 = {
-						CreatedOnToolsVersion = 12.0.1;
-						LastSwiftMigration = 1200;
-					};
-					F9255E44299E772E00EC4409 = {
+					F9E28CD329A0F9D3007E7474 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
 				};
 			};
-			buildConfigurationList = F9255E36299E772D00EC4409 /* Build configuration list for PBXProject "BrowsrLib" */;
+			buildConfigurationList = F9E28CC529A0F9D2007E7474 /* Build configuration list for PBXProject "BrowsrLib" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -364,53 +204,26 @@
 				en,
 				Base,
 			);
-			mainGroup = F9255E32299E772D00EC4409;
-			productRefGroup = F9255E3D299E772D00EC4409 /* Products */;
+			mainGroup = F9E28CC129A0F9D2007E7474;
+			productRefGroup = F9E28CCC29A0F9D2007E7474 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F9255E3B299E772D00EC4409 /* BrowsrLib */,
-				F9255E44299E772E00EC4409 /* BrowsrLibTests */,
-				F90EF0AA29A0E39F00271922 /* BrowsrApp */,
-				F90EF0C229A0E3AD00271922 /* BrowsrAppTests */,
-				F90EF0CD29A0E3AD00271922 /* BrowsrAppUITests */,
+				F9E28CCA29A0F9D2007E7474 /* BrowsrLib */,
+				F9E28CD329A0F9D3007E7474 /* BrowsrLibTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F90EF0A929A0E39F00271922 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F90EF0BD29A0E3AC00271922 /* LaunchScreen.storyboard in Resources */,
-				F90EF0BA29A0E3AC00271922 /* Assets.xcassets in Resources */,
-				F90EF0B529A0E39F00271922 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F90EF0C129A0E3AD00271922 /* Resources */ = {
+		F9E28CC929A0F9D2007E7474 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F90EF0CC29A0E3AD00271922 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9255E3A299E772D00EC4409 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9255E43299E772E00EC4409 /* Resources */ = {
+		F9E28CD229A0F9D3007E7474 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,219 +233,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F90EF0A729A0E39F00271922 /* Sources */ = {
+		F9E28CC729A0F9D2007E7474 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F90EF0B229A0E39F00271922 /* ViewController.swift in Sources */,
-				F90EF0AE29A0E39F00271922 /* AppDelegate.swift in Sources */,
-				F90EF0B829A0E39F00271922 /* BrowsrApp.xcdatamodeld in Sources */,
-				F90EF0B029A0E39F00271922 /* SceneDelegate.swift in Sources */,
+				F9E28CF129A0FA48007E7474 /* APIServiceMock.swift in Sources */,
+				F9E28CF229A0FA48007E7474 /* GithubAPI.swift in Sources */,
+				F9E28CF329A0FA48007E7474 /* Organizations.swift in Sources */,
+				F9E28CF029A0FA48007E7474 /* APIService.swift in Sources */,
+				F9E28CF429A0FA48007E7474 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F90EF0BF29A0E3AD00271922 /* Sources */ = {
+		F9E28CD029A0F9D3007E7474 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F90EF0C829A0E3AD00271922 /* BrowsrAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F90EF0CA29A0E3AD00271922 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F90EF0D329A0E3AD00271922 /* BrowsrAppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9255E38299E772D00EC4409 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F91D4A9B299FB3F1006170E5 /* Endpoint.swift in Sources */,
-				F9DF4B21299FE60100F1A447 /* GithubAPI.swift in Sources */,
-				F91D4A96299FB2C7006170E5 /* APIService.swift in Sources */,
-				F9DF4B02299FCDC500F1A447 /* Organizations.swift in Sources */,
-				F9DF4AF6299FC72400F1A447 /* APIServiceMock.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9255E41299E772E00EC4409 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F9255E4B299E772E00EC4409 /* APIServiceTests.swift in Sources */,
-				F9DF4B26299FE8C600F1A447 /* MockGithubAPI.swift in Sources */,
-				F9255E5D299E8B6600EC4409 /* EndpointTests.swift in Sources */,
-				F9DF4AFC299FCBB400F1A447 /* APIServiceGitHubTests.swift in Sources */,
+				F9E28CFC29A0FA76007E7474 /* EndpointTests.swift in Sources */,
+				F9E28CDA29A0F9D3007E7474 /* BrowsrLibTests.swift in Sources */,
+				F9E28D0529A0FC63007E7474 /* MockGithubAPI.swift in Sources */,
+				F9E28CFE29A0FA76007E7474 /* APIServiceTests.swift in Sources */,
+				F9E28CFD29A0FA76007E7474 /* APIServiceGitHubTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F90EF0C529A0E3AD00271922 /* PBXTargetDependency */ = {
+		F9E28CD729A0F9D3007E7474 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F90EF0AA29A0E39F00271922 /* BrowsrApp */;
-			targetProxy = F90EF0C429A0E3AD00271922 /* PBXContainerItemProxy */;
-		};
-		F90EF0D029A0E3AD00271922 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F90EF0AA29A0E39F00271922 /* BrowsrApp */;
-			targetProxy = F90EF0CF29A0E3AD00271922 /* PBXContainerItemProxy */;
-		};
-		F9255E48299E772E00EC4409 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F9255E3B299E772D00EC4409 /* BrowsrLib */;
-			targetProxy = F9255E47299E772E00EC4409 /* PBXContainerItemProxy */;
+			target = F9E28CCA29A0F9D2007E7474 /* BrowsrLib */;
+			targetProxy = F9E28CD629A0F9D3007E7474 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		F90EF0B329A0E39F00271922 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F90EF0B429A0E39F00271922 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F90EF0BB29A0E3AC00271922 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F90EF0BC29A0E3AC00271922 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		F90EF0D529A0E3AD00271922 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
-				INFOPLIST_FILE = BrowsrApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F90EF0D629A0E3AD00271922 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
-				INFOPLIST_FILE = BrowsrApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		F90EF0D729A0E3AD00271922 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
-				INFOPLIST_FILE = BrowsrAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrowsrApp.app/BrowsrApp";
-			};
-			name = Debug;
-		};
-		F90EF0D829A0E3AD00271922 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
-				INFOPLIST_FILE = BrowsrAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrowsrApp.app/BrowsrApp";
-			};
-			name = Release;
-		};
-		F90EF0D929A0E3AD00271922 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
-				INFOPLIST_FILE = BrowsrAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BrowsrApp;
-			};
-			name = Debug;
-		};
-		F90EF0DA29A0E3AD00271922 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
-				INFOPLIST_FILE = BrowsrAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BrowsrApp;
-			};
-			name = Release;
-		};
-		F9255E4E299E772E00EC4409 /* Debug */ = {
+		F9E28CDD29A0F9D3007E7474 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -696,7 +332,7 @@
 			};
 			name = Debug;
 		};
-		F9255E4F299E772E00EC4409 /* Release */ = {
+		F9E28CDE29A0F9D3007E7474 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -754,10 +390,9 @@
 			};
 			name = Release;
 		};
-		F9255E51299E772E00EC4409 /* Debug */ = {
+		F9E28CE029A0F9D3007E7474 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
@@ -774,17 +409,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F9255E52299E772E00EC4409 /* Release */ = {
+		F9E28CE129A0F9D3007E7474 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
@@ -801,13 +433,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		F9255E54299E772E00EC4409 /* Debug */ = {
+		F9E28CE329A0F9D3007E7474 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -826,7 +457,7 @@
 			};
 			name = Debug;
 		};
-		F9255E55299E772E00EC4409 /* Release */ = {
+		F9E28CE429A0F9D3007E7474 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -848,74 +479,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F90EF0DB29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrApp" */ = {
+		F9E28CC529A0F9D2007E7474 /* Build configuration list for PBXProject "BrowsrLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F90EF0D529A0E3AD00271922 /* Debug */,
-				F90EF0D629A0E3AD00271922 /* Release */,
+				F9E28CDD29A0F9D3007E7474 /* Debug */,
+				F9E28CDE29A0F9D3007E7474 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F90EF0DC29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrAppTests" */ = {
+		F9E28CDF29A0F9D3007E7474 /* Build configuration list for PBXNativeTarget "BrowsrLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F90EF0D729A0E3AD00271922 /* Debug */,
-				F90EF0D829A0E3AD00271922 /* Release */,
+				F9E28CE029A0F9D3007E7474 /* Debug */,
+				F9E28CE129A0F9D3007E7474 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F90EF0DD29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrAppUITests" */ = {
+		F9E28CE229A0F9D3007E7474 /* Build configuration list for PBXNativeTarget "BrowsrLibTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F90EF0D929A0E3AD00271922 /* Debug */,
-				F90EF0DA29A0E3AD00271922 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F9255E36299E772D00EC4409 /* Build configuration list for PBXProject "BrowsrLib" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F9255E4E299E772E00EC4409 /* Debug */,
-				F9255E4F299E772E00EC4409 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F9255E50299E772E00EC4409 /* Build configuration list for PBXNativeTarget "BrowsrLib" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F9255E51299E772E00EC4409 /* Debug */,
-				F9255E52299E772E00EC4409 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F9255E53299E772E00EC4409 /* Build configuration list for PBXNativeTarget "BrowsrLibTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F9255E54299E772E00EC4409 /* Debug */,
-				F9255E55299E772E00EC4409 /* Release */,
+				F9E28CE329A0F9D3007E7474 /* Debug */,
+				F9E28CE429A0F9D3007E7474 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F90EF0B629A0E39F00271922 /* BrowsrApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F90EF0B729A0E39F00271922 /* BrowsrApp.xcdatamodel */,
-			);
-			currentVersion = F90EF0B729A0E39F00271922 /* BrowsrApp.xcdatamodel */;
-			path = BrowsrApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = F9255E33299E772D00EC4409 /* Project object */;
+	rootObject = F9E28CC229A0F9D2007E7474 /* Project object */;
 }

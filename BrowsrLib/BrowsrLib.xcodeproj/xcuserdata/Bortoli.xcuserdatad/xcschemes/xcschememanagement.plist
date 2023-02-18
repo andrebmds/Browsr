@@ -4,30 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BrowsrApp.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 		<key>BrowsrLib.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>BrowsrLibTests.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>F9255E3B299E772D00EC4409</key>
+		<key>F9E28CCA29A0F9D2007E7474</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F9255E44299E772E00EC4409</key>
+		<key>F9E28CD329A0F9D3007E7474</key>
 		<dict>
 			<key>primary</key>
 			<true/>

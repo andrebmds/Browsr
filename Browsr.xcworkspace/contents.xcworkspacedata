@@ -4,4 +4,7 @@
    <FileRef
       location = "group:BrowsrApp/BrowsrApp.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:BrowsrLib/BrowsrLib.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -9,6 +9,20 @@ import Foundation
 @testable import BrowsrLib
 
 public class MockGithubAPI: GithubAPIType {
+    var error: Error?
+    var organizations: [Organization]?
+    
+    public func searchOrganizations(query: String, completion: @escaping (Result<Organizations, Error>) -> Void) {
+        if let error = error {
+            completion(.failure(error))
+        } else if let organizations = organizations {
+            let response = Organizations(organizations)
+            completion(.success(response))
+        } else {
+            completion(.failure(APIError.invalidData))
+        }
+    }
+    
     private var responseData: ResponseData
     
     init(responseData: ResponseData) {

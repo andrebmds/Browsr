@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F9255E3B299E772D00EC4409"
+               BlueprintIdentifier = "F9E28CCA29A0F9D2007E7474"
                BuildableName = "BrowsrLib.framework"
                BlueprintName = "BrowsrLib"
                ReferencedContainer = "container:BrowsrLib.xcodeproj">
@@ -26,14 +26,13 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F9255E44299E772E00EC4409"
+               BlueprintIdentifier = "F9E28CD329A0F9D3007E7474"
                BuildableName = "BrowsrLibTests.xctest"
                BlueprintName = "BrowsrLibTests"
                ReferencedContainer = "container:BrowsrLib.xcodeproj">
@@ -61,7 +60,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F9255E3B299E772D00EC4409"
+            BlueprintIdentifier = "F9E28CCA29A0F9D2007E7474"
             BuildableName = "BrowsrLib.framework"
             BlueprintName = "BrowsrLib"
             ReferencedContainer = "container:BrowsrLib.xcodeproj">
