@@ -5,7 +5,7 @@
 //  Created by Andre Bortoli on 2/17/23.
 //
 
-import UIKit
+import Foundation
 
 enum APIError: Error {
     case invalidResponse
@@ -35,6 +35,9 @@ class APIService {
             // Check the response status code
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode) else {
+                let statusCode = (response as? HTTPURLResponse)?.statusCode ?? -1
+                print("From rest 🔴:")
+                print("statusCode \(statusCode)")
                 completion(.failure(APIError.invalidResponse))
                 return
             }

@@ -16,6 +16,8 @@
 		F9DF4AF6299FC72400F1A447 /* APIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4AF5299FC72400F1A447 /* APIServiceMock.swift */; };
 		F9DF4AFC299FCBB400F1A447 /* APIServiceGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4AFB299FCBB400F1A447 /* APIServiceGitHubTests.swift */; };
 		F9DF4B02299FCDC500F1A447 /* Organizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4B01299FCDC500F1A447 /* Organizations.swift */; };
+		F9DF4B21299FE60100F1A447 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4B20299FE60100F1A447 /* GithubAPI.swift */; };
+		F9DF4B26299FE8C600F1A447 /* MockGithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF4B25299FE8C600F1A447 /* MockGithubAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		F9DF4AF5299FC72400F1A447 /* APIServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceMock.swift; sourceTree = "<group>"; };
 		F9DF4AFB299FCBB400F1A447 /* APIServiceGitHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceGitHubTests.swift; sourceTree = "<group>"; };
 		F9DF4B01299FCDC500F1A447 /* Organizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organizations.swift; sourceTree = "<group>"; };
+		F9DF4B20299FE60100F1A447 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		F9DF4B25299FE8C600F1A447 /* MockGithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGithubAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				F91D4A9A299FB3F1006170E5 /* Endpoint.swift */,
 				F9DF4AF5299FC72400F1A447 /* APIServiceMock.swift */,
 				F9DF4B01299FCDC500F1A447 /* Organizations.swift */,
+				F9DF4B20299FE60100F1A447 /* GithubAPI.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -104,12 +109,21 @@
 		F9255E49299E772E00EC4409 /* BrowsrLibTests */ = {
 			isa = PBXGroup;
 			children = (
+				F9DF4B2B299FE96400F1A447 /* Mock */,
 				F9255E5C299E8B6600EC4409 /* EndpointTests.swift */,
 				F9255E4A299E772E00EC4409 /* APIServiceTests.swift */,
 				F9DF4AFB299FCBB400F1A447 /* APIServiceGitHubTests.swift */,
 				F9255E4C299E772E00EC4409 /* Info.plist */,
 			);
 			path = BrowsrLibTests;
+			sourceTree = "<group>";
+		};
+		F9DF4B2B299FE96400F1A447 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				F9DF4B25299FE8C600F1A447 /* MockGithubAPI.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F91D4A9B299FB3F1006170E5 /* Endpoint.swift in Sources */,
+				F9DF4B21299FE60100F1A447 /* GithubAPI.swift in Sources */,
 				F91D4A96299FB2C7006170E5 /* APIService.swift in Sources */,
 				F9DF4B02299FCDC500F1A447 /* Organizations.swift in Sources */,
 				F9DF4AF6299FC72400F1A447 /* APIServiceMock.swift in Sources */,
@@ -233,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9255E4B299E772E00EC4409 /* APIServiceTests.swift in Sources */,
+				F9DF4B26299FE8C600F1A447 /* MockGithubAPI.swift in Sources */,
 				F9255E5D299E8B6600EC4409 /* EndpointTests.swift in Sources */,
 				F9DF4AFC299FCBB400F1A447 /* APIServiceGitHubTests.swift in Sources */,
 			);

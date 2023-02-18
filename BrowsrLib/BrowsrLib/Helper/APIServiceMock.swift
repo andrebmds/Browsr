@@ -5,7 +5,7 @@
 //  Created by Andre Bortoli on 2/17/23.
 //
 
-import UIKit
+import Foundation
 
 protocol URLSessionProtocol {
     associatedtype DataTaskType
