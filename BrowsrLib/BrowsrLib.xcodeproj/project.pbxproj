@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F90EF0AE29A0E39F00271922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0AD29A0E39F00271922 /* AppDelegate.swift */; };
+		F90EF0B029A0E39F00271922 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0AF29A0E39F00271922 /* SceneDelegate.swift */; };
+		F90EF0B229A0E39F00271922 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0B129A0E39F00271922 /* ViewController.swift */; };
+		F90EF0B529A0E39F00271922 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90EF0B329A0E39F00271922 /* Main.storyboard */; };
+		F90EF0B829A0E39F00271922 /* BrowsrApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0B629A0E39F00271922 /* BrowsrApp.xcdatamodeld */; };
+		F90EF0BA29A0E3AC00271922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F90EF0B929A0E3AC00271922 /* Assets.xcassets */; };
+		F90EF0BD29A0E3AC00271922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90EF0BB29A0E3AC00271922 /* LaunchScreen.storyboard */; };
+		F90EF0C829A0E3AD00271922 /* BrowsrAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0C729A0E3AD00271922 /* BrowsrAppTests.swift */; };
+		F90EF0D329A0E3AD00271922 /* BrowsrAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90EF0D229A0E3AD00271922 /* BrowsrAppUITests.swift */; };
 		F91D4A96299FB2C7006170E5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D4A95299FB2C7006170E5 /* APIService.swift */; };
 		F91D4A9B299FB3F1006170E5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D4A9A299FB3F1006170E5 /* Endpoint.swift */; };
 		F9255E46299E772E00EC4409 /* BrowsrLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9255E3C299E772D00EC4409 /* BrowsrLib.framework */; };
@@ -21,6 +30,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F90EF0C429A0E3AD00271922 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9255E33299E772D00EC4409 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F90EF0AA29A0E39F00271922;
+			remoteInfo = BrowsrApp;
+		};
+		F90EF0CF29A0E3AD00271922 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9255E33299E772D00EC4409 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F90EF0AA29A0E39F00271922;
+			remoteInfo = BrowsrApp;
+		};
 		F9255E47299E772E00EC4409 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9255E33299E772D00EC4409 /* Project object */;
@@ -31,6 +54,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F90EF0AB29A0E39F00271922 /* BrowsrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowsrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F90EF0AD29A0E39F00271922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F90EF0AF29A0E39F00271922 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F90EF0B129A0E39F00271922 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F90EF0B429A0E39F00271922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F90EF0B729A0E39F00271922 /* BrowsrApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrowsrApp.xcdatamodel; sourceTree = "<group>"; };
+		F90EF0B929A0E3AC00271922 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F90EF0BC29A0E3AC00271922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F90EF0BE29A0E3AC00271922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F90EF0C329A0E3AD00271922 /* BrowsrAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F90EF0C729A0E3AD00271922 /* BrowsrAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrAppTests.swift; sourceTree = "<group>"; };
+		F90EF0C929A0E3AD00271922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F90EF0CE29A0E3AD00271922 /* BrowsrAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F90EF0D229A0E3AD00271922 /* BrowsrAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrAppUITests.swift; sourceTree = "<group>"; };
+		F90EF0D429A0E3AD00271922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F91D4A95299FB2C7006170E5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F91D4A9A299FB3F1006170E5 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F9255E3C299E772D00EC4409 /* BrowsrLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BrowsrLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +86,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F90EF0A829A0E39F00271922 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F90EF0C029A0E3AD00271922 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F90EF0CB29A0E3AD00271922 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9255E39299E772D00EC4409 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,6 +125,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F90EF0AC29A0E39F00271922 /* BrowsrApp */ = {
+			isa = PBXGroup;
+			children = (
+				F90EF0AD29A0E39F00271922 /* AppDelegate.swift */,
+				F90EF0AF29A0E39F00271922 /* SceneDelegate.swift */,
+				F90EF0B129A0E39F00271922 /* ViewController.swift */,
+				F90EF0B329A0E39F00271922 /* Main.storyboard */,
+				F90EF0B929A0E3AC00271922 /* Assets.xcassets */,
+				F90EF0BB29A0E3AC00271922 /* LaunchScreen.storyboard */,
+				F90EF0BE29A0E3AC00271922 /* Info.plist */,
+				F90EF0B629A0E39F00271922 /* BrowsrApp.xcdatamodeld */,
+			);
+			path = BrowsrApp;
+			sourceTree = "<group>";
+		};
+		F90EF0C629A0E3AD00271922 /* BrowsrAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F90EF0C729A0E3AD00271922 /* BrowsrAppTests.swift */,
+				F90EF0C929A0E3AD00271922 /* Info.plist */,
+			);
+			path = BrowsrAppTests;
+			sourceTree = "<group>";
+		};
+		F90EF0D129A0E3AD00271922 /* BrowsrAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F90EF0D229A0E3AD00271922 /* BrowsrAppUITests.swift */,
+				F90EF0D429A0E3AD00271922 /* Info.plist */,
+			);
+			path = BrowsrAppUITests;
+			sourceTree = "<group>";
+		};
 		F91D4A99299FB312006170E5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +175,9 @@
 			children = (
 				F9255E3E299E772D00EC4409 /* BrowsrLib */,
 				F9255E49299E772E00EC4409 /* BrowsrLibTests */,
+				F90EF0AC29A0E39F00271922 /* BrowsrApp */,
+				F90EF0C629A0E3AD00271922 /* BrowsrAppTests */,
+				F90EF0D129A0E3AD00271922 /* BrowsrAppUITests */,
 				F9255E3D299E772D00EC4409 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +187,9 @@
 			children = (
 				F9255E3C299E772D00EC4409 /* BrowsrLib.framework */,
 				F9255E45299E772E00EC4409 /* BrowsrLibTests.xctest */,
+				F90EF0AB29A0E39F00271922 /* BrowsrApp.app */,
+				F90EF0C329A0E3AD00271922 /* BrowsrAppTests.xctest */,
+				F90EF0CE29A0E3AD00271922 /* BrowsrAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +238,59 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		F90EF0AA29A0E39F00271922 /* BrowsrApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F90EF0DB29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrApp" */;
+			buildPhases = (
+				F90EF0A729A0E39F00271922 /* Sources */,
+				F90EF0A829A0E39F00271922 /* Frameworks */,
+				F90EF0A929A0E39F00271922 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrowsrApp;
+			productName = BrowsrApp;
+			productReference = F90EF0AB29A0E39F00271922 /* BrowsrApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F90EF0C229A0E3AD00271922 /* BrowsrAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F90EF0DC29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrAppTests" */;
+			buildPhases = (
+				F90EF0BF29A0E3AD00271922 /* Sources */,
+				F90EF0C029A0E3AD00271922 /* Frameworks */,
+				F90EF0C129A0E3AD00271922 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F90EF0C529A0E3AD00271922 /* PBXTargetDependency */,
+			);
+			name = BrowsrAppTests;
+			productName = BrowsrAppTests;
+			productReference = F90EF0C329A0E3AD00271922 /* BrowsrAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F90EF0CD29A0E3AD00271922 /* BrowsrAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F90EF0DD29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrAppUITests" */;
+			buildPhases = (
+				F90EF0CA29A0E3AD00271922 /* Sources */,
+				F90EF0CB29A0E3AD00271922 /* Frameworks */,
+				F90EF0CC29A0E3AD00271922 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F90EF0D029A0E3AD00271922 /* PBXTargetDependency */,
+			);
+			name = BrowsrAppUITests;
+			productName = BrowsrAppUITests;
+			productReference = F90EF0CE29A0E3AD00271922 /* BrowsrAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		F9255E3B299E772D00EC4409 /* BrowsrLib */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9255E50299E772E00EC4409 /* Build configuration list for PBXNativeTarget "BrowsrLib" */;
@@ -185,6 +336,17 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					F90EF0AA29A0E39F00271922 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					F90EF0C229A0E3AD00271922 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = F90EF0AA29A0E39F00271922;
+					};
+					F90EF0CD29A0E3AD00271922 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = F90EF0AA29A0E39F00271922;
+					};
 					F9255E3B299E772D00EC4409 = {
 						CreatedOnToolsVersion = 12.0.1;
 						LastSwiftMigration = 1200;
@@ -209,11 +371,38 @@
 			targets = (
 				F9255E3B299E772D00EC4409 /* BrowsrLib */,
 				F9255E44299E772E00EC4409 /* BrowsrLibTests */,
+				F90EF0AA29A0E39F00271922 /* BrowsrApp */,
+				F90EF0C229A0E3AD00271922 /* BrowsrAppTests */,
+				F90EF0CD29A0E3AD00271922 /* BrowsrAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F90EF0A929A0E39F00271922 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90EF0BD29A0E3AC00271922 /* LaunchScreen.storyboard in Resources */,
+				F90EF0BA29A0E3AC00271922 /* Assets.xcassets in Resources */,
+				F90EF0B529A0E39F00271922 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F90EF0C129A0E3AD00271922 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F90EF0CC29A0E3AD00271922 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9255E3A299E772D00EC4409 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,6 +420,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F90EF0A729A0E39F00271922 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90EF0B229A0E39F00271922 /* ViewController.swift in Sources */,
+				F90EF0AE29A0E39F00271922 /* AppDelegate.swift in Sources */,
+				F90EF0B829A0E39F00271922 /* BrowsrApp.xcdatamodeld in Sources */,
+				F90EF0B029A0E39F00271922 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F90EF0BF29A0E3AD00271922 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90EF0C829A0E3AD00271922 /* BrowsrAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F90EF0CA29A0E3AD00271922 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90EF0D329A0E3AD00271922 /* BrowsrAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F9255E38299E772D00EC4409 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +473,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F90EF0C529A0E3AD00271922 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F90EF0AA29A0E39F00271922 /* BrowsrApp */;
+			targetProxy = F90EF0C429A0E3AD00271922 /* PBXContainerItemProxy */;
+		};
+		F90EF0D029A0E3AD00271922 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F90EF0AA29A0E39F00271922 /* BrowsrApp */;
+			targetProxy = F90EF0CF29A0E3AD00271922 /* PBXContainerItemProxy */;
+		};
 		F9255E48299E772E00EC4409 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F9255E3B299E772D00EC4409 /* BrowsrLib */;
@@ -264,7 +490,148 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		F90EF0B329A0E39F00271922 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F90EF0B429A0E39F00271922 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F90EF0BB29A0E3AC00271922 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F90EF0BC29A0E3AC00271922 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		F90EF0D529A0E3AD00271922 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
+				INFOPLIST_FILE = BrowsrApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F90EF0D629A0E3AD00271922 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
+				INFOPLIST_FILE = BrowsrApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F90EF0D729A0E3AD00271922 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
+				INFOPLIST_FILE = BrowsrAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrowsrApp.app/BrowsrApp";
+			};
+			name = Debug;
+		};
+		F90EF0D829A0E3AD00271922 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
+				INFOPLIST_FILE = BrowsrAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrowsrApp.app/BrowsrApp";
+			};
+			name = Release;
+		};
+		F90EF0D929A0E3AD00271922 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
+				INFOPLIST_FILE = BrowsrAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrowsrApp;
+			};
+			name = Debug;
+		};
+		F90EF0DA29A0E3AD00271922 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YEXSDXA5Z;
+				INFOPLIST_FILE = BrowsrAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrowsrApp;
+			};
+			name = Release;
+		};
 		F9255E4E299E772E00EC4409 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -481,6 +848,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F90EF0DB29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F90EF0D529A0E3AD00271922 /* Debug */,
+				F90EF0D629A0E3AD00271922 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F90EF0DC29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F90EF0D729A0E3AD00271922 /* Debug */,
+				F90EF0D829A0E3AD00271922 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F90EF0DD29A0E3AD00271922 /* Build configuration list for PBXNativeTarget "BrowsrAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F90EF0D929A0E3AD00271922 /* Debug */,
+				F90EF0DA29A0E3AD00271922 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F9255E36299E772D00EC4409 /* Build configuration list for PBXProject "BrowsrLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -509,6 +903,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F90EF0B629A0E39F00271922 /* BrowsrApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F90EF0B729A0E39F00271922 /* BrowsrApp.xcdatamodel */,
+			);
+			currentVersion = F90EF0B729A0E39F00271922 /* BrowsrApp.xcdatamodel */;
+			path = BrowsrApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F9255E33299E772D00EC4409 /* Project object */;
 }

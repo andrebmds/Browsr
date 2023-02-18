@@ -9,6 +9,7 @@ import Foundation
 
 protocol GithubAPIType {
     func getOrganizations(completion: @escaping (Result<Organizations, Error>) -> Void)
+    func searchOrganizations(query: String, completion: @escaping (Result<Organizations, Error>) -> Void)
 }
 
 class GithubAPI {
@@ -19,6 +20,13 @@ class GithubAPI {
     }
 }
 extension GithubAPI: GithubAPIType {
+    func searchOrganizations(query: String, completion: @escaping (Result<Organizations, Error>) -> Void) {
+        let endpoint = GitHubEndpoint.searchOrganizations(query: query)
+        apiService.request(endpoint) { (result: Result<Organizations, Error>) in
+            completion(result)
+        }
+    }
+
     func getOrganizations(completion: @escaping (Result<Organizations, Error>) -> Void) {
         let endpoint = GitHubEndpoint.listOrganizations
         apiService.request(endpoint) { (result: Result<Organizations, Error>) in

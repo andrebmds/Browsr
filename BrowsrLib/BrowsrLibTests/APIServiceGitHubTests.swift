@@ -21,8 +21,6 @@ class APIServiceGitHubTests: XCTestCase {
     func testGetOrganizationsMock() {
         let expectation = self.expectation(description: "Get organizations")
         
-        //        sut.get
-        
         sut.getOrganizations { result in
             switch result {
             case .success(let organizations):
