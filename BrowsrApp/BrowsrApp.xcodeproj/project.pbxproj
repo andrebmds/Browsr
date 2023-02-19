@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		F9E28C8B29A0F314007E7474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28C8A29A0F314007E7474 /* AppDelegate.swift */; };
 		F9E28C8D29A0F314007E7474 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28C8C29A0F314007E7474 /* SceneDelegate.swift */; };
-		F9E28C8F29A0F314007E7474 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28C8E29A0F314007E7474 /* ViewController.swift */; };
-		F9E28C9229A0F314007E7474 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E28C9029A0F314007E7474 /* Main.storyboard */; };
+		F9E28C8F29A0F314007E7474 /* OrganizationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28C8E29A0F314007E7474 /* OrganizationsViewController.swift */; };
 		F9E28C9529A0F314007E7474 /* BrowsrApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9E28C9329A0F314007E7474 /* BrowsrApp.xcdatamodeld */; };
 		F9E28C9729A0F31E007E7474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E28C9629A0F31E007E7474 /* Assets.xcassets */; };
 		F9E28C9A29A0F31E007E7474 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E28C9829A0F31E007E7474 /* LaunchScreen.storyboard */; };
 		F9E28CA529A0F31F007E7474 /* BrowsrAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CA429A0F31F007E7474 /* BrowsrAppTests.swift */; };
 		F9E28CB029A0F31F007E7474 /* BrowsrAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CAF29A0F31F007E7474 /* BrowsrAppUITests.swift */; };
-		F9E28D0F29A10045007E7474 /* BrowsrLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E28D0E29A10045007E7474 /* BrowsrLib.framework */; };
-		F9E28D1029A10045007E7474 /* BrowsrLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9E28D0E29A10045007E7474 /* BrowsrLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9E28D1729A12BBC007E7474 /* OrganizationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D1629A12BBC007E7474 /* OrganizationCell.swift */; };
+		F9E28D2429A13AAB007E7474 /* BrowsrLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */; };
+		F9E28D2529A13AAB007E7474 /* BrowsrLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F9E28D1029A10045007E7474 /* BrowsrLib.framework in Embed Frameworks */,
+				F9E28D2529A13AAB007E7474 /* BrowsrLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,8 +55,7 @@
 		F9E28C8729A0F314007E7474 /* BrowsrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowsrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E28C8A29A0F314007E7474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9E28C8C29A0F314007E7474 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F9E28C8E29A0F314007E7474 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F9E28C9129A0F314007E7474 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9E28C8E29A0F314007E7474 /* OrganizationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsViewController.swift; sourceTree = "<group>"; };
 		F9E28C9429A0F314007E7474 /* BrowsrApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrowsrApp.xcdatamodel; sourceTree = "<group>"; };
 		F9E28C9629A0F31E007E7474 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9E28C9929A0F31E007E7474 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,7 +66,8 @@
 		F9E28CAB29A0F31F007E7474 /* BrowsrAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowsrAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E28CAF29A0F31F007E7474 /* BrowsrAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsrAppUITests.swift; sourceTree = "<group>"; };
 		F9E28CB129A0F31F007E7474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9E28D0E29A10045007E7474 /* BrowsrLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BrowsrLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E28D1629A12BBC007E7474 /* OrganizationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationCell.swift; sourceTree = "<group>"; };
+		F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BrowsrLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E28D0F29A10045007E7474 /* BrowsrLib.framework in Frameworks */,
+				F9E28D2429A13AAB007E7474 /* BrowsrLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +122,8 @@
 			children = (
 				F9E28C8A29A0F314007E7474 /* AppDelegate.swift */,
 				F9E28C8C29A0F314007E7474 /* SceneDelegate.swift */,
-				F9E28C8E29A0F314007E7474 /* ViewController.swift */,
-				F9E28C9029A0F314007E7474 /* Main.storyboard */,
+				F9E28C8E29A0F314007E7474 /* OrganizationsViewController.swift */,
+				F9E28D1629A12BBC007E7474 /* OrganizationCell.swift */,
 				F9E28C9629A0F31E007E7474 /* Assets.xcassets */,
 				F9E28C9829A0F31E007E7474 /* LaunchScreen.storyboard */,
 				F9E28C9B29A0F31E007E7474 /* Info.plist */,
@@ -153,7 +153,7 @@
 		F9E28D0D29A10045007E7474 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F9E28D0E29A10045007E7474 /* BrowsrLib.framework */,
+				F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,7 +264,6 @@
 			files = (
 				F9E28C9A29A0F31E007E7474 /* LaunchScreen.storyboard in Resources */,
 				F9E28C9729A0F31E007E7474 /* Assets.xcassets in Resources */,
-				F9E28C9229A0F314007E7474 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E28C8F29A0F314007E7474 /* ViewController.swift in Sources */,
+				F9E28C8F29A0F314007E7474 /* OrganizationsViewController.swift in Sources */,
+				F9E28D1729A12BBC007E7474 /* OrganizationCell.swift in Sources */,
 				F9E28C8B29A0F314007E7474 /* AppDelegate.swift in Sources */,
 				F9E28C9529A0F314007E7474 /* BrowsrApp.xcdatamodeld in Sources */,
 				F9E28C8D29A0F314007E7474 /* SceneDelegate.swift in Sources */,
@@ -328,14 +328,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F9E28C9029A0F314007E7474 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9E28C9129A0F314007E7474 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F9E28C9829A0F31E007E7474 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -478,7 +470,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -497,7 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Bortoli.BrowsrApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

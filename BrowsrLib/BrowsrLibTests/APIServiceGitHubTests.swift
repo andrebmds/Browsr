@@ -60,7 +60,7 @@ class APIServiceGitHubTests: XCTestCase {
         let expectation = XCTestExpectation(description: "API response")
         // Call the GitHub organizations endpoint
         let endpoint = GitHubEndpoint.listOrganizations
-        apiService.request(endpoint) { (result: Result<Organizations, Error>) in
+        apiService.request(endpoint) { (result: Result<[Organization], Error>) in
             switch result {
             case .success(let organizations):
                 // Check that at least one organization was returned

@@ -12,10 +12,10 @@ enum APIError: Error {
     case invalidData
 }
 
-class APIService {
+public class APIService {
     private let session: URLSession
     
-    init(session: URLSession = .shared) {
+    public init(session: URLSession = .shared) {
         self.session = session
     }
     

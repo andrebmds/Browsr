@@ -8,28 +8,30 @@
 import Foundation
 
 protocol GithubAPIType {
-    func getOrganizations(completion: @escaping (Result<Organizations, Error>) -> Void)
-    func searchOrganizations(query: String, completion: @escaping (Result<Organizations, Error>) -> Void)
+    func getOrganizations(completion: @escaping (Result<[Organization], Error>) -> Void)
+    func searchOrganizations(query: String, completion: @escaping (Result<[Organization], Error>) -> Void)
+    
 }
 
-class GithubAPI {
+public class GithubAPI {
     private let apiService: APIService
     
-    init(apiService: APIService = APIService()) {
+    public init(apiService: APIService = APIService()) {
         self.apiService = apiService
     }
 }
+
 extension GithubAPI: GithubAPIType {
-    func searchOrganizations(query: String, completion: @escaping (Result<Organizations, Error>) -> Void) {
+    public func searchOrganizations(query: String, completion: @escaping (Result<[Organization], Error>) -> Void) {
         let endpoint = GitHubEndpoint.searchOrganizations(query: query)
-        apiService.request(endpoint) { (result: Result<Organizations, Error>) in
+        apiService.request(endpoint) { (result: Result<[Organization], Error>) in
             completion(result)
         }
     }
 
-    func getOrganizations(completion: @escaping (Result<Organizations, Error>) -> Void) {
+    public func getOrganizations(completion: @escaping (Result<[Organization], Error>) -> Void) {
         let endpoint = GitHubEndpoint.listOrganizations
-        apiService.request(endpoint) { (result: Result<Organizations, Error>) in
+        apiService.request(endpoint) { (result: Result<[Organization], Error>) in
             completion(result)
         }
     }

@@ -12,11 +12,11 @@ public class MockGithubAPI: GithubAPIType {
     var error: Error?
     var organizations: [Organization]?
     
-    public func searchOrganizations(query: String, completion: @escaping (Result<Organizations, Error>) -> Void) {
+    public func searchOrganizations(query: String, completion: @escaping (Result<[Organization], Error>) -> Void) {
         if let error = error {
             completion(.failure(error))
         } else if let organizations = organizations {
-            let response = Organizations(organizations)
+            let response = [Organization](organizations)
             completion(.success(response))
         } else {
             completion(.failure(APIError.invalidData))
@@ -29,12 +29,12 @@ public class MockGithubAPI: GithubAPIType {
         self.responseData = responseData
     }
     
-    public func getOrganizations(completion: @escaping (Result<Organizations, Error>) -> Void) {
+    public func getOrganizations(completion: @escaping (Result<[Organization], Error>) -> Void) {
         let data = responseData.rawValue.data(using: .utf8)!
         
         do {
             let decoder = JSONDecoder()
-            let organizations = try decoder.decode(Organizations.self, from: data)
+            let organizations = try decoder.decode([Organization].self, from: data)
             completion(.success(organizations))
         } catch {
             completion(.failure(error))

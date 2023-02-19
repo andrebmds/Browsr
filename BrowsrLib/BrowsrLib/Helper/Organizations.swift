@@ -8,15 +8,15 @@
 import Foundation
 
 // MARK: - Organization
-struct Organization: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let url, reposURL, eventsURL, hooksURL: String?
-    let issuesURL: String?
-    let membersURL, publicMembersURL: String?
-    let avatarURL: String?
-    let description: String?
+public struct Organization: Codable {
+    public let login: String?
+    public let id: Int?
+    public let nodeID: String?
+    public let url, reposURL, eventsURL, hooksURL: String?
+    public let issuesURL: String?
+    public let membersURL, publicMembersURL: String?
+    public let avatarURL: String?
+    public let description: String?
 
     enum CodingKeys: String, CodingKey {
         case login, id
@@ -33,4 +33,4 @@ struct Organization: Codable {
     }
 }
 
-typealias Organizations = [Organization]
+//typealias Organizations = [Organization]
