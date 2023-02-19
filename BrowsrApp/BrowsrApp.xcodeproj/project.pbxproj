@@ -18,6 +18,8 @@
 		F9E28D1729A12BBC007E7474 /* OrganizationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D1629A12BBC007E7474 /* OrganizationCell.swift */; };
 		F9E28D2429A13AAB007E7474 /* BrowsrLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */; };
 		F9E28D2529A13AAB007E7474 /* BrowsrLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9E28D5629A2880F007E7474 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D5529A2880F007E7474 /* Organization.swift */; };
+		F9E28D5D29A2889F007E7474 /* OrganizationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D5C29A2889F007E7474 /* OrganizationsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		F9E28CB129A0F31F007E7474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9E28D1629A12BBC007E7474 /* OrganizationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationCell.swift; sourceTree = "<group>"; };
 		F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BrowsrLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E28D5529A2880F007E7474 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		F9E28D5C29A2889F007E7474 /* OrganizationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +126,9 @@
 			children = (
 				F9E28C8A29A0F314007E7474 /* AppDelegate.swift */,
 				F9E28C8C29A0F314007E7474 /* SceneDelegate.swift */,
-				F9E28C8E29A0F314007E7474 /* OrganizationsViewController.swift */,
-				F9E28D1629A12BBC007E7474 /* OrganizationCell.swift */,
+				F9E28D5329A2878D007E7474 /* View */,
+				F9E28D5B29A2887C007E7474 /* ViewModel */,
+				F9E28D5429A287F1007E7474 /* Model */,
 				F9E28C9629A0F31E007E7474 /* Assets.xcassets */,
 				F9E28C9829A0F31E007E7474 /* LaunchScreen.storyboard */,
 				F9E28C9B29A0F31E007E7474 /* Info.plist */,
@@ -156,6 +161,31 @@
 				F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9E28D5329A2878D007E7474 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9E28C8E29A0F314007E7474 /* OrganizationsViewController.swift */,
+				F9E28D1629A12BBC007E7474 /* OrganizationCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9E28D5429A287F1007E7474 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9E28D5529A2880F007E7474 /* Organization.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F9E28D5B29A2887C007E7474 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F9E28D5C29A2889F007E7474 /* OrganizationsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +322,8 @@
 				F9E28D1729A12BBC007E7474 /* OrganizationCell.swift in Sources */,
 				F9E28C8B29A0F314007E7474 /* AppDelegate.swift in Sources */,
 				F9E28C9529A0F314007E7474 /* BrowsrApp.xcdatamodeld in Sources */,
+				F9E28D5D29A2889F007E7474 /* OrganizationsViewModel.swift in Sources */,
+				F9E28D5629A2880F007E7474 /* Organization.swift in Sources */,
 				F9E28C8D29A0F314007E7474 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

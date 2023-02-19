@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BrowsrLib
 
 class OrganizationCell: UITableViewCell {
     let nameLabel: UILabel = {
@@ -23,7 +24,8 @@ class OrganizationCell: UITableViewCell {
         view.frame.size = CGSize(width: 50, height: 50)
         return view
     }()
-    
+    var avatarImageCache = NSCache<NSString, UIImage>()
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(nameLabel)
@@ -37,7 +39,6 @@ class OrganizationCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
@@ -54,4 +55,27 @@ class OrganizationCell: UITableViewCell {
             avatarImageView.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
+    
+    func configure(with organization: Organization) {
+        guard let login = organization.login else { return }
+        nameLabel.text = login
+        if let cachedImage = avatarImageCache.object(forKey: login as NSString) {
+            avatarImageView.image = cachedImage
+        } else {
+            avatarImageView.image = UIImage(named: "placeHolder")
+            if let avatarURL = organization.avatarURL, let url = URL(string: avatarURL) {
+                URLSession.shared.dataTask(with: url) { data, response, error in
+                    if let data = data {
+                        if let image = UIImage(data: data) {
+                            self.avatarImageCache.setObject(image, forKey: login as NSString)
+                            DispatchQueue.main.async {
+                                self.avatarImageView.image = image
+                            }
+                        }
+                    }
+                }.resume()
+            }
+        }
+    }
 }
+

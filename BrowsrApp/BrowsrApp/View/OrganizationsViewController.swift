@@ -79,26 +79,8 @@ extension OrganizationsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrganizationCell", for: indexPath) as! OrganizationCell
-            
-            // Set the placeholder image in the imageView.
-            cell.avatarImageView.image = UIImage(named: "placeHolder")
-            
             let organization = filteredOrganizations[indexPath.row]
-            cell.nameLabel.text = organization.login
-            if let avatarURL = organization.avatarURL, let url = URL(string: avatarURL) {
-                // Download the image asynchronously and update the imageView on completion.
-                cell.avatarImageView.loadImage(fromURL: url) { result in
-                    switch result {
-                    case .success(let image):
-                        DispatchQueue.main.async {
-                            cell.avatarImageView.image = image
-                        }
-                    case .failure(let error):
-                        print("Error downloading image: \(error)")
-                    }
-                }
-            }
-            
+            cell.configure(with: organization)
             return cell
     }
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -111,7 +93,7 @@ extension OrganizationsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let organization = filteredOrganizations[indexPath.row]
-//        print("Selected organization: \(organization.login)")
+        print("Selected organization: \(organization.login ?? "")")
     }
 }
 
