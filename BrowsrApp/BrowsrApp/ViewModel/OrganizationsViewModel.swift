@@ -11,9 +11,9 @@ import BrowsrLib
 class OrganizationsViewModel {
     var organizations: [Organization] = []
     var filteredOrganizations: [Organization] = []
-
+    
     var fetchOrganizations: ((@escaping () -> Void) -> Void)?
-
+    
     init(api: GithubAPI) {
         fetchOrganizations = { [weak self] completion in
             api.getOrganizations { result in
@@ -28,7 +28,7 @@ class OrganizationsViewModel {
             }
         }
     }
-
+    
     func filterOrganizations(with searchText: String) {
         if searchText.isEmpty {
             filteredOrganizations = organizations

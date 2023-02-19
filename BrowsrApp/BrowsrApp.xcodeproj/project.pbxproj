@@ -20,6 +20,7 @@
 		F9E28D2529A13AAB007E7474 /* BrowsrLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9E28D5629A2880F007E7474 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D5529A2880F007E7474 /* Organization.swift */; };
 		F9E28D5D29A2889F007E7474 /* OrganizationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D5C29A2889F007E7474 /* OrganizationsViewModel.swift */; };
+		F9E28D6F29A29693007E7474 /* OrganizationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D6E29A29693007E7474 /* OrganizationCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BrowsrLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E28D5529A2880F007E7474 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		F9E28D5C29A2889F007E7474 /* OrganizationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsViewModel.swift; sourceTree = "<group>"; };
+		F9E28D6E29A29693007E7474 /* OrganizationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				F9E28D5C29A2889F007E7474 /* OrganizationsViewModel.swift */,
+				F9E28D6E29A29693007E7474 /* OrganizationCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				F9E28C8F29A0F314007E7474 /* OrganizationsViewController.swift in Sources */,
 				F9E28D1729A12BBC007E7474 /* OrganizationCell.swift in Sources */,
 				F9E28C8B29A0F314007E7474 /* AppDelegate.swift in Sources */,
+				F9E28D6F29A29693007E7474 /* OrganizationCellViewModel.swift in Sources */,
 				F9E28C9529A0F314007E7474 /* BrowsrApp.xcdatamodeld in Sources */,
 				F9E28D5D29A2889F007E7474 /* OrganizationsViewModel.swift in Sources */,
 				F9E28D5629A2880F007E7474 /* Organization.swift in Sources */,

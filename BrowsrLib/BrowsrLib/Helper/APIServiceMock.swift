@@ -23,13 +23,13 @@ extension URLSessionDataTask: URLSessionDataTaskProtocol {}
 class URLSessionDataTaskMock: URLSessionDataTaskProtocol {
     var resumeWasCalled = false
     typealias CompletionHandler = URLSessionMock.CompletionHandler
-
+    
     private let completion: CompletionHandler
-
+    
     init(completion: @escaping CompletionHandler) {
         self.completion = completion
     }
-
+    
     func resume() {
         // create some data
         resumeWasCalled = true

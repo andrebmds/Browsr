@@ -17,7 +17,7 @@ public struct Organization: Codable {
     public let membersURL, publicMembersURL: String?
     public let avatarURL: String?
     public let description: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case login, id
         case nodeID = "node_id"

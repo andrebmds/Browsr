@@ -28,7 +28,7 @@ extension GithubAPI: GithubAPIType {
             completion(result)
         }
     }
-
+    
     public func getOrganizations(completion: @escaping (Result<[Organization], Error>) -> Void) {
         let endpoint = GitHubEndpoint.listOrganizations
         apiService.request(endpoint) { (result: Result<[Organization], Error>) in

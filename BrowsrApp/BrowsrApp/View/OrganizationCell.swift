@@ -6,26 +6,27 @@
 //
 
 import UIKit
-import BrowsrLib
 
 class OrganizationCell: UITableViewCell {
-    let nameLabel: UILabel = {
+    private var viewModel: OrganizationCellViewModel?
+    
+    private let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Gione"
         label.font = UIFont.systemFont(ofSize: 14)
         label.numberOfLines = 1
         label.textAlignment = .natural
         return label
     }()
     
-    let avatarImageView: UIImageView = {
-        let view = UIImageView(image: UIImage(named: "placeHolder"))
+    private let avatarImageView: UIImageView = {
+        let view = UIImageView()
         view.contentMode = .scaleAspectFit
         view.frame.size = CGSize(width: 50, height: 50)
         return view
     }()
-    var avatarImageCache = NSCache<NSString, UIImage>()
-
+    
+    private var avatarImageCache = NSCache<NSString, UIImage>()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(nameLabel)
@@ -37,9 +38,11 @@ class OrganizationCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        viewModel = nil
+        nameLabel.text = nil
+        avatarImageView.image = nil
     }
     
     func setConstraints() {
@@ -56,26 +59,17 @@ class OrganizationCell: UITableViewCell {
         ])
     }
     
-    func configure(with organization: Organization) {
-        guard let login = organization.login else { return }
-        nameLabel.text = login
-        if let cachedImage = avatarImageCache.object(forKey: login as NSString) {
-            avatarImageView.image = cachedImage
-        } else {
-            avatarImageView.image = UIImage(named: "placeHolder")
-            if let avatarURL = organization.avatarURL, let url = URL(string: avatarURL) {
-                URLSession.shared.dataTask(with: url) { data, response, error in
-                    if let data = data {
-                        if let image = UIImage(data: data) {
-                            self.avatarImageCache.setObject(image, forKey: login as NSString)
-                            DispatchQueue.main.async {
-                                self.avatarImageView.image = image
-                            }
-                        }
-                    }
-                }.resume()
+    func configure(with viewModel: OrganizationCellViewModel) {
+        self.viewModel = viewModel
+        nameLabel.text = viewModel.name
+        viewModel.loadImage { [weak self] image in
+            guard let self = self else { return }
+            if let image = image {
+                DispatchQueue.main.async {
+                    self.avatarImageView.image = image
+                }
             }
         }
     }
 }
-
+//}

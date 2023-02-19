@@ -22,7 +22,7 @@ class OrganizationsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 50
-
+        
         tableView.register(OrganizationCell.self, forCellReuseIdentifier: "OrganizationCell")
         view.addSubview(tableView)
         
@@ -67,13 +67,14 @@ extension OrganizationsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrganizationCell", for: indexPath) as! OrganizationCell
         let organization = viewModel.filteredOrganizations[indexPath.row]
-        cell.configure(with: organization)
+        let cellViewModel = OrganizationCellViewModel(organization: organization)
+        cell.configure(with: cellViewModel)
         return cell
     }
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-
+    
 }
 
 extension OrganizationsViewController: UITableViewDelegate {
