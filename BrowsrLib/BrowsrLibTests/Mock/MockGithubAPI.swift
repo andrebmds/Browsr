@@ -10,17 +10,30 @@ import Foundation
 
 public class MockGithubAPI: GithubAPIType {
     var error: Error?
-    var organizations: [Organization]?
+    var organizations: Organizations?
     
-    public func searchOrganizations(query: String, completion: @escaping (Result<[Organization], Error>) -> Void) {
+    public func searchOrganizations(query: String, completion: @escaping (Result<Organizations, Error>) -> Void) {
+        //        if let error = error {
+        //            completion(.failure(error))
+        //        } else if let organizations = organizations {
+        ////            let response = Organizations(organizations)
+        //            completion(.success(response))
+        //        } else {
+        //            completion(.failure(APIError.invalidData))
+        //        }
+        //
         if let error = error {
             completion(.failure(error))
-        } else if let organizations = organizations {
-            let response = [Organization](organizations)
-            completion(.success(response))
-        } else {
-            completion(.failure(APIError.invalidData))
         }
+        let data = responseData.rawValue.data(using: .utf8)!
+        do {
+            let decoder = JSONDecoder()
+            let organizations = try decoder.decode(Organizations.self, from: data)
+            completion(.success(organizations))
+        } catch {
+            completion(.failure(error))
+        }
+        
     }
     
     private var responseData: ResponseData
@@ -29,13 +42,14 @@ public class MockGithubAPI: GithubAPIType {
         self.responseData = responseData
     }
     
-    public func getOrganizations(completion: @escaping (Result<[Organization], Error>) -> Void) {
+    public func getOrganizations(completion: @escaping (Result<[Item], Error>) -> Void) {
         let data = responseData.rawValue.data(using: .utf8)!
         
         do {
             let decoder = JSONDecoder()
-            let organizations = try decoder.decode([Organization].self, from: data)
-            completion(.success(organizations))
+            let organizations = try decoder.decode(Organizations.self, from: data)
+            
+            completion(.success(organizations.items ?? []))
         } catch {
             completion(.failure(error))
         }
@@ -44,36 +58,54 @@ public class MockGithubAPI: GithubAPIType {
 
 enum ResponseData: String {
     case validData = """
-            [
-                {
-                    "login": "errfree",
-                    "id": 44,
-                    "node_id": "MDEyOk9yZ2FuaXphdGlvbjQ0",
-                    "url": "https://api.github.com/orgs/errfree",
-                    "repos_url": "https://api.github.com/orgs/errfree/repos",
-                    "events_url": "https://api.github.com/orgs/errfree/events",
-                    "hooks_url": "https://api.github.com/orgs/errfree/hooks",
-                    "issues_url": "https://api.github.com/orgs/errfree/issues",
-                    "members_url": "https://api.github.com/orgs/errfree/members{/member}",
-                    "public_members_url": "https://api.github.com/orgs/errfree/public_members{/member}",
-                    "avatar_url": "https://avatars.githubusercontent.com/u/44?v=4",
-                    "description": null
-                },
-                {
-                    "login": "engineyard",
-                    "id": 81,
-                    "node_id": "MDEyOk9yZ2FuaXphdGlvbjgx",
-                    "url": "https://api.github.com/orgs/engineyard",
-                    "repos_url": "https://api.github.com/orgs/engineyard/repos",
-                    "events_url": "https://api.github.com/orgs/engineyard/events",
-                    "hooks_url": "https://api.github.com/orgs/engineyard/hooks",
-                    "issues_url": "https://api.github.com/orgs/engineyard/issues",
-                    "members_url": "https://api.github.com/orgs/engineyard/members{/member}",
-                    "public_members_url": "https://api.github.com/orgs/engineyard/public_members{/member}",
-                    "avatar_url": "https://avatars.githubusercontent.com/u/81?v=4",
-                    "description": ""
-                }
-            ]
+            {
+                "total_count": 5027369,
+                "incomplete_results": false,
+                "items": [
+                    {
+                        "login": "microsoft",
+                        "id": 6154722,
+                        "node_id": "MDEyOk9yZ2FuaXphdGlvbjYxNTQ3MjI=",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/6154722?v=4",
+                        "gravatar_id": "",
+                        "url": "https://api.github.com/users/microsoft",
+                        "html_url": "https://github.com/microsoft",
+                        "followers_url": "https://api.github.com/users/microsoft/followers",
+                        "following_url": "https://api.github.com/users/microsoft/following{/other_user}",
+                        "gists_url": "https://api.github.com/users/microsoft/gists{/gist_id}",
+                        "starred_url": "https://api.github.com/users/microsoft/starred{/owner}{/repo}",
+                        "subscriptions_url": "https://api.github.com/users/microsoft/subscriptions",
+                        "organizations_url": "https://api.github.com/users/microsoft/orgs",
+                        "repos_url": "https://api.github.com/users/microsoft/repos",
+                        "events_url": "https://api.github.com/users/microsoft/events{/privacy}",
+                        "received_events_url": "https://api.github.com/users/microsoft/received_events",
+                        "type": "Organization",
+                        "site_admin": false,
+                        "score": 1.0
+                    },
+                    {
+                        "login": "openai",
+                        "id": 14957082,
+                        "node_id": "MDEyOk9yZ2FuaXphdGlvbjE0OTU3MDgy",
+                        "avatar_url": "https://avatars.githubusercontent.com/u/14957082?v=4",
+                        "gravatar_id": "",
+                        "url": "https://api.github.com/users/openai",
+                        "html_url": "https://github.com/openai",
+                        "followers_url": "https://api.github.com/users/openai/followers",
+                        "following_url": "https://api.github.com/users/openai/following{/other_user}",
+                        "gists_url": "https://api.github.com/users/openai/gists{/gist_id}",
+                        "starred_url": "https://api.github.com/users/openai/starred{/owner}{/repo}",
+                        "subscriptions_url": "https://api.github.com/users/openai/subscriptions",
+                        "organizations_url": "https://api.github.com/users/openai/orgs",
+                        "repos_url": "https://api.github.com/users/openai/repos",
+                        "events_url": "https://api.github.com/users/openai/events{/privacy}",
+                        "received_events_url": "https://api.github.com/users/openai/received_events",
+                        "type": "Organization",
+                        "site_admin": false,
+                        "score": 1.0
+                    }
+                ]
+            }
             """
     case invalidData = "invalid data"
 }

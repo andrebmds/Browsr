@@ -16,7 +16,6 @@
 		F9E28CF429A0FA48007E7474 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CEF29A0FA48007E7474 /* Endpoint.swift */; };
 		F9E28CFC29A0FA76007E7474 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CF929A0FA76007E7474 /* EndpointTests.swift */; };
 		F9E28CFD29A0FA76007E7474 /* APIServiceGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CFA29A0FA76007E7474 /* APIServiceGitHubTests.swift */; };
-		F9E28CFE29A0FA76007E7474 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28CFB29A0FA76007E7474 /* APIServiceTests.swift */; };
 		F9E28D0529A0FC63007E7474 /* MockGithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D0429A0FC62007E7474 /* MockGithubAPI.swift */; };
 		F9E28D3729A22451007E7474 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D3629A22451007E7474 /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -44,7 +43,6 @@
 		F9E28CEF29A0FA48007E7474 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F9E28CF929A0FA76007E7474 /* EndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		F9E28CFA29A0FA76007E7474 /* APIServiceGitHubTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceGitHubTests.swift; sourceTree = "<group>"; };
-		F9E28CFB29A0FA76007E7474 /* APIServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 		F9E28D0429A0FC62007E7474 /* MockGithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockGithubAPI.swift; sourceTree = "<group>"; };
 		F9E28D3629A22451007E7474 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +99,6 @@
 			children = (
 				F9E28D0329A0FC62007E7474 /* Mock */,
 				F9E28CFA29A0FA76007E7474 /* APIServiceGitHubTests.swift */,
-				F9E28CFB29A0FA76007E7474 /* APIServiceTests.swift */,
 				F9E28CF929A0FA76007E7474 /* EndpointTests.swift */,
 				F9E28CDB29A0F9D3007E7474 /* Info.plist */,
 			);
@@ -252,7 +249,6 @@
 			files = (
 				F9E28CFC29A0FA76007E7474 /* EndpointTests.swift in Sources */,
 				F9E28D0529A0FC63007E7474 /* MockGithubAPI.swift in Sources */,
-				F9E28CFE29A0FA76007E7474 /* APIServiceTests.swift in Sources */,
 				F9E28CFD29A0FA76007E7474 /* APIServiceGitHubTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

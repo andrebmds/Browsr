@@ -24,7 +24,7 @@ class EndpointTests: XCTestCase {
     func testRequestParameters() {
         let endpoint = GitHubEndpoint.searchOrganizations(query: "apple")
         let request = endpoint.request()
-        XCTAssertEqual(request.url?.absoluteString, "https://api.github.com/search/orgs?q=apple")
+        XCTAssertEqual(request.url?.absoluteString, "https://api.github.com/search/users?q=apple+type:org")
     }
     
     func testOrganizationEndpoint() {
