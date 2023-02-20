@@ -42,7 +42,7 @@ public class MockGithubAPI: GithubAPIType {
         self.responseData = responseData
     }
     
-    public func getOrganizations(completion: @escaping (Result<[Item], Error>) -> Void) {
+    public func getOrganizations(page: Int, perPage: Int, completion: @escaping (Result<[Item], Error>) -> Void) {
         let data = responseData.rawValue.data(using: .utf8)!
         
         do {

@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:BrowsrApp/Readme.md">
-   </FileRef>
-   <FileRef
       location = "group:BrowsrApp/BrowsrApp.xcodeproj">
    </FileRef>
    <FileRef

@@ -19,7 +19,9 @@ extension Endpoint {
         // Construct the URL for the endpoint
         let baseURL = "https://api.github.com"
         let urlString = baseURL + path
-        let url = URL(string: urlString)!
+        guard let url = URL(string: urlString) else {
+            fatalError("Invalid URL: \(urlString)")
+        }
         
         // Create the URL request with the appropriate method and headers
         var request = URLRequest(url: url)
@@ -33,10 +35,11 @@ extension Endpoint {
         // Add the parameters to the request body or query string, depending on the HTTP method
         if let parameters = parameters {
             if method == .get {
-                let queryString = parameters.map { key, value in "\(key)=\(value)" }.joined(separator: "&")
-                let escapedQuery = queryString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-                let urlWithQuery = URL(string: urlString + "?" + escapedQuery)!
-                request.url = urlWithQuery
+                var urlComponents = URLComponents(string: urlString)!
+                urlComponents.queryItems = parameters.map { key, value in
+                    URLQueryItem(name: key, value: "\(value)")
+                }
+                request.url = urlComponents.url
             } else {
                 let jsonData = try! JSONSerialization.data(withJSONObject: parameters, options: [])
                 request.httpBody = jsonData
@@ -55,7 +58,7 @@ enum HTTPMethod: String {
 }
 
 enum GitHubEndpoint {
-    case listOrganizations
+    case listOrganizations(page: Int, perPage: Int)
     case searchOrganizations(query: String)
 }
 
@@ -75,8 +78,8 @@ extension GitHubEndpoint: Endpoint {
 
     var parameters: [String: Any]? {
         switch self {
-        case .listOrganizations:
-            return nil
+        case .listOrganizations(let page, let perPage):
+            return ["page": page, "per_page": perPage]
         case .searchOrganizations(let query):
             return ["q": "\(query)+type:org"]
         }

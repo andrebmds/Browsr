@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GithubAPIType {
-    func getOrganizations(completion: @escaping (Result<[Item], Error>) -> Void)
+    func getOrganizations(page: Int, perPage: Int, completion: @escaping (Result<[Item], Error>) -> Void)
     func searchOrganizations(query: String, completion: @escaping (Result<Organizations, Error>) -> Void)
 }
 
@@ -28,8 +28,8 @@ extension GithubAPI: GithubAPIType {
         }
     }
     
-    public func getOrganizations(completion: @escaping (Result<[Item], Error>) -> Void) {
-        let endpoint = GitHubEndpoint.listOrganizations
+    public func getOrganizations(page: Int, perPage: Int, completion: @escaping (Result<[Item], Error>) -> Void) {
+        let endpoint = GitHubEndpoint.listOrganizations(page: page, perPage: perPage)
         apiService.request(endpoint) { (result: Result<[Item], Error>) in
             completion(result)
         }

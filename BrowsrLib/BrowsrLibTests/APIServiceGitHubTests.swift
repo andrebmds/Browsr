@@ -10,18 +10,21 @@ import XCTest
 
 class APIServiceGitHubTests: XCTestCase {
     var sut: GithubAPI!
+    
     override func setUp() {
         super.setUp()
         sut = GithubAPI()
     }
+    
     override func tearDown() {
         sut = nil
         super.tearDown()
     }
+    
     func testGetOrganizationsMock() {
         let expectation = self.expectation(description: "Get organizations")
         
-        sut.getOrganizations { result in
+        sut.getOrganizations(page: 1, perPage: 30) { result in
             switch result {
             case .success(let organizations):
                 XCTAssertNotNil(organizations, "Organizations should not be nil")
@@ -33,11 +36,12 @@ class APIServiceGitHubTests: XCTestCase {
         
         waitForExpectations(timeout: 10, handler: nil)
     }
+    
     func testGetOrganizationsSuccess() {
         let mock = MockGithubAPI(responseData: .validData)
         let expectation = XCTestExpectation(description: "Completion called")
         
-        mock.getOrganizations { result in
+        mock.getOrganizations(page: 1, perPage: 30) { result in
             switch result {
             case .success(let organizations):
                 XCTAssertEqual(organizations.count, 2)

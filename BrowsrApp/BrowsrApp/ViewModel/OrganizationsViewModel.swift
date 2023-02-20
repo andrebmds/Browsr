@@ -17,24 +17,15 @@ class OrganizationsViewModel {
     init(api: GithubAPI) {
         self.api = api
         fetchOrganizations = { [weak self] completion in
-            api.searchOrganizations(query: "") { result in
-                switch result {
-                case .success(let organizations):
-                    self?.organizations = organizations.items ?? []
-                    self?.filteredOrganizations = self?.organizations ?? []
-                    completion()
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
+            guard let self = self else { return }
+            self.getOrganizations(page: 1, perPage: 30) {
+                completion()
             }
         }
     }
-    
     func filterOrganizations(with searchText: String, completion: @escaping () -> Void) {
-        
         // Cancel any previous search task that may be in progress
         searchTask?.cancel()
-        
         // Create a new search task with a 0.5 second delay
         searchTask = DispatchWorkItem { [weak self] in
             self?.api.searchOrganizations(query: searchText) { [weak self] result in
@@ -50,4 +41,17 @@ class OrganizationsViewModel {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: searchTask!)
     }
     
+    func getOrganizations(page: Int, perPage: Int, completion: @escaping () -> Void ){
+        api.getOrganizations(page: page, perPage: perPage) {  [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let organizations):
+                self.organizations = organizations
+                self.filteredOrganizations = self.organizations
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            completion()
+        }
+    }
 }
