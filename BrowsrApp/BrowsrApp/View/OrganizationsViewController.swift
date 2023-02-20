@@ -84,9 +84,9 @@ class OrganizationsViewController: UIViewController {
     }
     
     func setConstraints() {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         internetConnectionStatusImageView?.translatesAutoresizingMaskIntoConstraints = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -138,14 +138,24 @@ extension OrganizationsViewController: UITableViewDelegate {
 
 extension OrganizationsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.filterOrganizations(with: searchText)
-        tableView.reloadData()
+        viewModel.filterOrganizations(with: searchText) { [weak self] in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+//        tableView.reloadData()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.filterOrganizations(with: "")
+        viewModel.filterOrganizations(with: "") { [weak self] in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        }
         searchBar.text = ""
         searchBar.resignFirstResponder()
-        tableView.reloadData()
     }
 }

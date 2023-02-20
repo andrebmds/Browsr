@@ -8,11 +8,8 @@
 import Foundation
 
 protocol GithubAPIType {
-    func getOrganizations(completion: @escaping (Result<[Organization], Error>) -> Void)
-    func searchOrganizations(query: String, completion: @escaping (Result<[Organization], Error>) -> Void)
-    func getFavoriteOrganizations(completion: @escaping (Result<[Organization], Error>) -> Void)
-    func setFavorite(_ isFavorite: Bool, forOrganization organization: Organization, completion: @escaping (Result<Void, Error>) -> Void)
-    
+    func getOrganizations(completion: @escaping (Result<[Item], Error>) -> Void)
+    func searchOrganizations(query: String, completion: @escaping (Result<Organizations, Error>) -> Void)
 }
 
 public class GithubAPI {
@@ -24,24 +21,17 @@ public class GithubAPI {
 }
 
 extension GithubAPI: GithubAPIType {
-    public func searchOrganizations(query: String, completion: @escaping (Result<[Organization], Error>) -> Void) {
+    public func searchOrganizations(query: String, completion: @escaping (Result<Organizations, Error>) -> Void) {
         let endpoint = GitHubEndpoint.searchOrganizations(query: query)
-        apiService.request(endpoint) { (result: Result<[Organization], Error>) in
+        apiService.request(endpoint) { (result: Result<Organizations, Error>) in
             completion(result)
         }
     }
     
-    public func getOrganizations(completion: @escaping (Result<[Organization], Error>) -> Void) {
+    public func getOrganizations(completion: @escaping (Result<[Item], Error>) -> Void) {
         let endpoint = GitHubEndpoint.listOrganizations
-        apiService.request(endpoint) { (result: Result<[Organization], Error>) in
+        apiService.request(endpoint) { (result: Result<[Item], Error>) in
             completion(result)
         }
-    }
-    public func getFavoriteOrganizations(completion: @escaping (Result<[Organization], Error>) -> Void) {
-        // TODO: Implement the storage method for getting favorite organizations
-    }
-    
-    public func setFavorite(_ isFavorite: Bool, forOrganization organization: Organization, completion: @escaping (Result<Void, Error>) -> Void) {
-        // TODO: Implement the storage method for setting the favorite status of an organization
     }
 }

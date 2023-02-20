@@ -34,7 +34,8 @@ extension Endpoint {
         if let parameters = parameters {
             if method == .get {
                 let queryString = parameters.map { key, value in "\(key)=\(value)" }.joined(separator: "&")
-                let urlWithQuery = URL(string: urlString + "?" + queryString)!
+                let escapedQuery = queryString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+                let urlWithQuery = URL(string: urlString + "?" + escapedQuery)!
                 request.url = urlWithQuery
             } else {
                 let jsonData = try! JSONSerialization.data(withJSONObject: parameters, options: [])
@@ -64,23 +65,23 @@ extension GitHubEndpoint: Endpoint {
         case .listOrganizations:
             return "/organizations"
         case .searchOrganizations:
-            return "/search/orgs"
+            return "/search/users"
         }
     }
-    
+
     var method: HTTPMethod {
         return .get
     }
-    
+
     var parameters: [String: Any]? {
         switch self {
         case .listOrganizations:
             return nil
         case .searchOrganizations(let query):
-            return ["q": query]
+            return ["q": "\(query)+type:org"]
         }
     }
-    
+
     var headers: [String: String]? {
         return nil
     }
