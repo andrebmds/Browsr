@@ -7,6 +7,7 @@
 
 import UIKit
 import BrowsrLib
+import CoreData
 
 class OrganizationCellViewModel {
     let item: Item
@@ -20,6 +21,7 @@ class OrganizationCellViewModel {
     
     init(organization: Item) {
         self.item = organization
+        if let id = item.id { self.isFavorite = FavoriteOrganizationsManager.isFavorite(id: id) }
     }
     
     func loadImage(completion: @escaping (UIImage?) -> Void) {
@@ -41,10 +43,14 @@ class OrganizationCellViewModel {
             }.resume()
         }
     }
+    
     func toggleFavorite() {
         isFavorite = !isFavorite
-
-//        guard let organization = organization else { return }
-//        FavoriteOrganizationsManager.shared.toggleFavorite(organization)
+        guard let id = item.id else { return }
+        if isFavorite {
+            FavoriteOrganizationsManager.saveFavoriteOrganization(id: id)
+        } else {
+            FavoriteOrganizationsManager.removeFavoriteOrganization(id: id)
+        }
     }
 }

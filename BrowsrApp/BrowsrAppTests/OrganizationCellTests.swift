@@ -12,7 +12,7 @@ import BrowsrLib
 class BrowsrAppTests: XCTestCase {
     var cell: OrganizationCell!
     var viewModel: OrganizationCellViewModel!
-    var organization: Organization!
+    var organization: Item!
 
     override func setUp() {
         super.setUp()
@@ -36,7 +36,7 @@ class BrowsrAppTests: XCTestCase {
 
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let organization = try! decoder.decode(Organization.self, from: json)
+        let organization = try! decoder.decode(Item.self, from: json)
 
         viewModel = OrganizationCellViewModel(organization: organization)
     }

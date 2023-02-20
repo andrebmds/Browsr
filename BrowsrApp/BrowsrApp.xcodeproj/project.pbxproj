@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F970092A29A38ECC00DF79B5 /* Org+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970092829A38ECC00DF79B5 /* Org+CoreDataClass.swift */; };
+		F970092B29A38ECC00DF79B5 /* Org+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970092929A38ECC00DF79B5 /* Org+CoreDataProperties.swift */; };
+		F970092F29A3977E00DF79B5 /* FavoriteOrganizationsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970092E29A3977E00DF79B5 /* FavoriteOrganizationsManagerTests.swift */; };
 		F977A16729A307CD001D975A /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = F977A16629A307CD001D975A /* Reachability */; };
 		F977A16B29A307F5001D975A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F977A16A29A307F5001D975A /* SystemConfiguration.framework */; };
 		F977A16D29A3080E001D975A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F977A16C29A3080E001D975A /* NetworkManager.swift */; };
@@ -60,6 +63,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F970092829A38ECC00DF79B5 /* Org+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Org+CoreDataClass.swift"; path = "../../../Org+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F970092929A38ECC00DF79B5 /* Org+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Org+CoreDataProperties.swift"; path = "../../../Org+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F970092E29A3977E00DF79B5 /* FavoriteOrganizationsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteOrganizationsManagerTests.swift; sourceTree = "<group>"; };
 		F977A16A29A307F5001D975A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F977A16C29A3080E001D975A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F995C9F829A2FE4600AD6A9C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -155,6 +161,7 @@
 			children = (
 				F9E28CA429A0F31F007E7474 /* OrganizationCellTests.swift */,
 				F9E28CA629A0F31F007E7474 /* Info.plist */,
+				F970092E29A3977E00DF79B5 /* FavoriteOrganizationsManagerTests.swift */,
 			);
 			path = BrowsrAppTests;
 			sourceTree = "<group>";
@@ -189,6 +196,8 @@
 		F9E28D5429A287F1007E7474 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F970092829A38ECC00DF79B5 /* Org+CoreDataClass.swift */,
+				F970092929A38ECC00DF79B5 /* Org+CoreDataProperties.swift */,
 				F9E28D5529A2880F007E7474 /* Organization.swift */,
 			);
 			path = Model;
@@ -352,10 +361,12 @@
 			files = (
 				F9E28C8F29A0F314007E7474 /* OrganizationsViewController.swift in Sources */,
 				F9E28D1729A12BBC007E7474 /* OrganizationCell.swift in Sources */,
+				F970092A29A38ECC00DF79B5 /* Org+CoreDataClass.swift in Sources */,
 				F9E28C8B29A0F314007E7474 /* AppDelegate.swift in Sources */,
 				F9E28D6F29A29693007E7474 /* OrganizationCellViewModel.swift in Sources */,
 				F977A16D29A3080E001D975A /* NetworkManager.swift in Sources */,
 				F9E28C9529A0F314007E7474 /* BrowsrApp.xcdatamodeld in Sources */,
+				F970092B29A38ECC00DF79B5 /* Org+CoreDataProperties.swift in Sources */,
 				F995C9F929A2FE4600AD6A9C /* CoreDataStack.swift in Sources */,
 				F9E28D5D29A2889F007E7474 /* OrganizationsViewModel.swift in Sources */,
 				F9E28DA129A2F2C2007E7474 /* FavoriteOrganizationsManager.swift in Sources */,
@@ -368,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F970092F29A3977E00DF79B5 /* FavoriteOrganizationsManagerTests.swift in Sources */,
 				F9E28CA529A0F31F007E7474 /* OrganizationCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

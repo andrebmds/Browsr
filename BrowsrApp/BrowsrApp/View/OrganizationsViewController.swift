@@ -8,6 +8,7 @@
 import UIKit
 import BrowsrLib
 import Reachability
+import CoreData
 
 class OrganizationsViewController: UIViewController {
     
@@ -15,29 +16,16 @@ class OrganizationsViewController: UIViewController {
     var searchBar = UISearchBar()
     var viewModel: OrganizationsViewModel!
     var internetConnectionStatusImageView: UIImageView?
+    var activityIndicatorView: UIActivityIndicatorView!
+    
+    var container: NSPersistentContainer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        internetConnectionStatusImageView = UIImageView(image: UIImage(systemName: "wifi.slash"))
-
-        internetConnectionStatusImageView?.isHidden = true
-        view.addSubview(internetConnectionStatusImageView!)
-        
-        // Set up the table view
-        tableView = UITableView(frame: view.bounds, style: .plain)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = 50
-        
-        tableView.register(OrganizationCell.self, forCellReuseIdentifier: "OrganizationCell")
-        view.addSubview(tableView)
-        
-        // Set up the search bar
-        searchBar.placeholder = "Search"
-        searchBar.delegate = self
-        searchBar.showsCancelButton = true
-        view.addSubview(searchBar)
+        guard container != nil else {
+            fatalError("This view needs a persistent container.")
+        }
+        setupView()
         setConstraints()
         // Fetch the organizations
         let api = GithubAPI()
@@ -83,6 +71,31 @@ class OrganizationsViewController: UIViewController {
         }
     }
     
+    func setupView() {
+        internetConnectionStatusImageView = UIImageView(image: UIImage(systemName: "wifi.slash"))
+        internetConnectionStatusImageView?.isHidden = true
+        internetConnectionStatusImageView?.startAnimating()
+        view.addSubview(internetConnectionStatusImageView!)
+        // Set up the table view
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 50
+        tableView.register(OrganizationCell.self, forCellReuseIdentifier: "OrganizationCell")
+        view.addSubview(tableView)
+        // Set up the search bar
+        searchBar.placeholder = "Search"
+        searchBar.delegate = self
+        searchBar.showsCancelButton = true
+        view.addSubview(searchBar)
+        
+        activityIndicatorView = UIActivityIndicatorView(style: .medium)
+        activityIndicatorView.center = view.center
+        activityIndicatorView.hidesWhenStopped = true
+        view.addSubview(activityIndicatorView)
+        
+    }
+    
     func setConstraints() {
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         internetConnectionStatusImageView?.translatesAutoresizingMaskIntoConstraints = false
@@ -123,6 +136,7 @@ extension OrganizationsViewController: UITableViewDataSource {
         cell.configure(with: cellViewModel)
         return cell
     }
+    
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -144,7 +158,6 @@ extension OrganizationsViewController: UISearchBarDelegate {
                 self.tableView.reloadData()
             }
         }
-//        tableView.reloadData()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

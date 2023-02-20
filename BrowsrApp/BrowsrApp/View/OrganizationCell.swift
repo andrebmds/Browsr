@@ -97,7 +97,6 @@ class OrganizationCell: UITableViewCell {
     
     func setFavoriteButton() {
         if let isFavorite = viewModel?.isFavorite {
-            print("isFavorite \(isFavorite)")
             favoriteButton.setImage(UIImage(systemName: isFavorite ? "heart.fill" : "heart"), for: .normal)
             favoriteButton.tintColor = isFavorite ? .red : .gray
         }
