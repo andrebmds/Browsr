@@ -7,15 +7,22 @@
 
 import UIKit
 import BrowsrLib
+import Reachability
 
 class OrganizationsViewController: UIViewController {
     
     var tableView: UITableView!
     var searchBar = UISearchBar()
     var viewModel: OrganizationsViewModel!
+    var internetConnectionStatusImageView: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        internetConnectionStatusImageView = UIImageView(image: UIImage(systemName: "wifi.slash"))
+
+        internetConnectionStatusImageView?.isHidden = true
+        view.addSubview(internetConnectionStatusImageView!)
         
         // Set up the table view
         tableView = UITableView(frame: view.bounds, style: .plain)
@@ -42,9 +49,44 @@ class OrganizationsViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateInternetConnectionStatus()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(networkStatusDidChange), name: .reachabilityChanged, object: nil)
+        do {
+            let reachability = try Reachability()
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+    }
+    
+    deinit {
+        let reachability = try! Reachability()
+        reachability.stopNotifier()
+        NotificationCenter.default.removeObserver(self, name: .reachabilityChanged, object: nil)
+    }
+    
+    @objc func networkStatusDidChange(_ notification: Notification) {
+        updateInternetConnectionStatus()
+    }
+    
+    func updateInternetConnectionStatus() {
+        if NetworkManager.isConnectedToInternet() {
+            internetConnectionStatusImageView?.isHidden = true
+            tableView.isHidden = false
+        } else {
+            internetConnectionStatusImageView?.isHidden = false
+            tableView.isHidden = true
+        }
+    }
+    
     func setConstraints() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         searchBar.translatesAutoresizingMaskIntoConstraints = false
+        internetConnectionStatusImageView?.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -56,6 +98,16 @@ class OrganizationsViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
+        
+        if let internetConnectionStatusLabel = internetConnectionStatusImageView {
+            internetConnectionStatusLabel.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                internetConnectionStatusLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                internetConnectionStatusLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                internetConnectionStatusLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+                internetConnectionStatusLabel.widthAnchor.constraint(equalTo: internetConnectionStatusLabel.heightAnchor)
+            ])
+        }
     }
 }
 

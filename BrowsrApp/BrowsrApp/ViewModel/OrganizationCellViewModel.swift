@@ -12,6 +12,7 @@ class OrganizationCellViewModel {
     let organization: Organization
     var avatarImage: UIImage?
     let avatarImageCache = NSCache<NSString, UIImage>()
+    var isFavorite: Bool = false
     
     var name: String {
         return organization.login ?? ""
@@ -39,5 +40,11 @@ class OrganizationCellViewModel {
                 }
             }.resume()
         }
+    }
+    func toggleFavorite() {
+        isFavorite = !isFavorite
+
+//        guard let organization = organization else { return }
+//        FavoriteOrganizationsManager.shared.toggleFavorite(organization)
     }
 }
