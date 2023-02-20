@@ -25,7 +25,6 @@
 		F9E28D1729A12BBC007E7474 /* OrganizationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D1629A12BBC007E7474 /* OrganizationCell.swift */; };
 		F9E28D2429A13AAB007E7474 /* BrowsrLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */; };
 		F9E28D2529A13AAB007E7474 /* BrowsrLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F9E28D5629A2880F007E7474 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D5529A2880F007E7474 /* Organization.swift */; };
 		F9E28D5D29A2889F007E7474 /* OrganizationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D5C29A2889F007E7474 /* OrganizationsViewModel.swift */; };
 		F9E28D6F29A29693007E7474 /* OrganizationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28D6E29A29693007E7474 /* OrganizationCellViewModel.swift */; };
 		F9E28DA129A2F2C2007E7474 /* FavoriteOrganizationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E28DA029A2F2C2007E7474 /* FavoriteOrganizationsManager.swift */; };
@@ -85,7 +84,6 @@
 		F9E28CB129A0F31F007E7474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9E28D1629A12BBC007E7474 /* OrganizationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationCell.swift; sourceTree = "<group>"; };
 		F9E28D2329A13AAB007E7474 /* BrowsrLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BrowsrLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9E28D5529A2880F007E7474 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		F9E28D5C29A2889F007E7474 /* OrganizationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsViewModel.swift; sourceTree = "<group>"; };
 		F9E28D6E29A29693007E7474 /* OrganizationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationCellViewModel.swift; sourceTree = "<group>"; };
 		F9E28DA029A2F2C2007E7474 /* FavoriteOrganizationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteOrganizationsManager.swift; sourceTree = "<group>"; };
@@ -198,7 +196,7 @@
 			children = (
 				F970092829A38ECC00DF79B5 /* Org+CoreDataClass.swift */,
 				F970092929A38ECC00DF79B5 /* Org+CoreDataProperties.swift */,
-				F9E28D5529A2880F007E7474 /* Organization.swift */,
+				F9E28C9329A0F314007E7474 /* BrowsrApp.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,7 +213,6 @@
 		F9E28D9F29A2F26C007E7474 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				F9E28C9329A0F314007E7474 /* BrowsrApp.xcdatamodeld */,
 				F9E28DA029A2F2C2007E7474 /* FavoriteOrganizationsManager.swift */,
 				F995C9F829A2FE4600AD6A9C /* CoreDataStack.swift */,
 				F977A16C29A3080E001D975A /* NetworkManager.swift */,
@@ -370,7 +367,6 @@
 				F995C9F929A2FE4600AD6A9C /* CoreDataStack.swift in Sources */,
 				F9E28D5D29A2889F007E7474 /* OrganizationsViewModel.swift in Sources */,
 				F9E28DA129A2F2C2007E7474 /* FavoriteOrganizationsManager.swift in Sources */,
-				F9E28D5629A2880F007E7474 /* Organization.swift in Sources */,
 				F9E28C8D29A0F314007E7474 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,7 +20,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "026E9624-66FF-46E6-BBEF-123B8905EF84"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrowsrApp/BrowsrApp/Helper/FavoriteOrganizationsManager.swift"
