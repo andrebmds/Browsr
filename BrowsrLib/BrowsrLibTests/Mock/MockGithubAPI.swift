@@ -13,15 +13,6 @@ public class MockGithubAPI: GithubAPIType {
     var organizations: Organizations?
     
     public func searchOrganizations(query: String, completion: @escaping (Result<Organizations, Error>) -> Void) {
-        //        if let error = error {
-        //            completion(.failure(error))
-        //        } else if let organizations = organizations {
-        ////            let response = Organizations(organizations)
-        //            completion(.success(response))
-        //        } else {
-        //            completion(.failure(APIError.invalidData))
-        //        }
-        //
         if let error = error {
             completion(.failure(error))
         }
