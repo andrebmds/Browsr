@@ -14,28 +14,38 @@ class OrganizationsViewModel {
     var fetchOrganizations: ((@escaping () -> Void) -> Void)?
     var api: GithubAPI
     private var searchTask: DispatchWorkItem?
+    var page = 1
+    var isLoading = false
+    
     init(api: GithubAPI) {
         self.api = api
         fetchOrganizations = { [weak self] completion in
             guard let self = self else { return }
-            self.getOrganizations(page: 1, perPage: 30) {
+            self.getOrganizations(page: self.page, perPage: 100) {
                 completion()
             }
         }
     }
+    
     func filterOrganizations(with searchText: String, completion: @escaping () -> Void) {
         // Cancel any previous search task that may be in progress
         searchTask?.cancel()
-        // Create a new search task with a 0.5 second delay
-        searchTask = DispatchWorkItem { [weak self] in
-            self?.api.searchOrganizations(query: searchText) { [weak self] result in
-                switch result {
-                case .success(let organizations):
-                    self?.filteredOrganizations = organizations.items ?? []
-                case .failure(let error):
-                    print(error.localizedDescription)
+        if searchText == "" {
+            self.getOrganizations(page: self.page, perPage: 100) {
+                completion()
+            }
+        } else {
+            // Create a new search task with a 0.5 second delay
+            searchTask = DispatchWorkItem { [weak self] in
+                self?.api.searchOrganizations(query: searchText) { [weak self] result in
+                    switch result {
+                    case .success(let organizations):
+                        self?.filteredOrganizations = organizations.items ?? []
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                    completion()
                 }
-                completion() 
             }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: searchTask!)
@@ -46,7 +56,7 @@ class OrganizationsViewModel {
             guard let self = self else { return }
             switch result {
             case .success(let organizations):
-                self.organizations = organizations
+                self.organizations += organizations
                 self.filteredOrganizations = self.organizations
             case .failure(let error):
                 print(error.localizedDescription)

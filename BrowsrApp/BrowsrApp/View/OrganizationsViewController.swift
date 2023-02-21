@@ -104,21 +104,19 @@ class OrganizationsViewController: UIViewController {
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-        ])
-        NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
         
-        if let internetConnectionStatusLabel = internetConnectionStatusImageView {
-            internetConnectionStatusLabel.translatesAutoresizingMaskIntoConstraints = false
+        if let internetConnectionStatus = internetConnectionStatusImageView {
+            internetConnectionStatus.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                internetConnectionStatusLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-                internetConnectionStatusLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                internetConnectionStatusLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
-                internetConnectionStatusLabel.widthAnchor.constraint(equalTo: internetConnectionStatusLabel.heightAnchor)
+                internetConnectionStatus.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                internetConnectionStatus.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                internetConnectionStatus.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+                internetConnectionStatus.widthAnchor.constraint(equalTo: internetConnectionStatus.heightAnchor)
             ])
         }
     }
@@ -140,7 +138,6 @@ extension OrganizationsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
 }
 
 extension OrganizationsViewController: UITableViewDelegate {
@@ -161,7 +158,7 @@ extension OrganizationsViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.filterOrganizations(with: "") { [weak self] in
+        viewModel.fetchOrganizations? { [weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.tableView.reloadData()

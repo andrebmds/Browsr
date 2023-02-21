@@ -42,10 +42,122 @@
             filePath = "BrowsrLib/BrowsrLibTests/Mock/MockGithubAPI.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "getOrganizations(completion:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getOrganizations(page:perPage:completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "466D9D69-3776-436D-AF34-52D1E3EE17B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrowsrApp/BrowsrApp/ViewModel/OrganizationsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "getOrganizations(page:perPage:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "583F4FFB-A616-4C98-A937-46E05AEF8BEA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrowsrApp/BrowsrApp/ViewModel/OrganizationsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "filterOrganizations(with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "583F4FFB-A616-4C98-A937-46E05AEF8BEA - 4e8893437caa966"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrowsrApp.OrganizationsViewModel.filterOrganizations(with: Swift.String, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "BrowsrApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Bortoli/Thryve/BrowsrApp/BrowsrApp/ViewModel/OrganizationsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "615">
+               </Location>
+               <Location
+                  uuid = "583F4FFB-A616-4C98-A937-46E05AEF8BEA - 58ea2c2a3acea275"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in BrowsrApp.OrganizationsViewModel.filterOrganizations(with: Swift.String, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "BrowsrApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Bortoli/Thryve/BrowsrApp/BrowsrApp/ViewModel/OrganizationsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "575E9743-C9F7-49A7-BEAB-3FD6DFDA96FC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrowsrApp/BrowsrApp/ViewModel/OrganizationsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "filterOrganizations(with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "575E9743-C9F7-49A7-BEAB-3FD6DFDA96FC - 5a450770ab76dd99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;BrowsrLib.Organizations, Swift.Error&gt;) -&gt; () in closure #2 () -&gt; () in BrowsrApp.OrganizationsViewModel.filterOrganizations(with: Swift.String, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "BrowsrApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Bortoli/Thryve/BrowsrApp/BrowsrApp/ViewModel/OrganizationsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "575E9743-C9F7-49A7-BEAB-3FD6DFDA96FC - 5a450770ab76dd99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;BrowsrLib.Organizations, Swift.Error&gt;) -&gt; () in closure #2 () -&gt; () in BrowsrApp.OrganizationsViewModel.filterOrganizations(with: Swift.String, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "BrowsrApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Bortoli/Thryve/BrowsrApp/BrowsrApp/ViewModel/OrganizationsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "411">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
